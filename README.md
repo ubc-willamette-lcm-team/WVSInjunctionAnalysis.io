@@ -1,1 +1,1 @@
-See the HTML link on the right panel under "About" to view the rendered HTML timeline.  
+View the dynamic timeline by clicking on this link: [https://ubc-willamette-lcm-team.github.io/WVSInjunctionAnalysis.io/](https://ubc-willamette-lcm-team.github.io/WVSInjunctionAnalysis.io/)
