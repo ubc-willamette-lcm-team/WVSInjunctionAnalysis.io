@@ -1,30 +1,31 @@
 ---
-title: "WV Injunction Measures: Implementation timeline reported in biannual reports"
-author: "Mairin Deith"
-date: "Last updated May 22, 2024"
+title: "Willamette Valley System Injunction: Implementation timelines as reported in biannual reports"
+author: "Mairin Deith, m.deith@oceans.ubc.ca"
+date: "`r paste0('Last updated on ', format(Sys.time(), '%Y-%b-%d'))`"
 output:
   html_document:
     toc: true
-    number_sections: true
+    number_sections: false
     toc_float: true
-    theme: cerulean
+    theme: flatly
 ---
 
-# Goal of this memo
+# Background 
 
-For each sub-basin of the Upper Willamette system, the implementation of injunction and interim measures has been underway since spring 2022.
+Since spring 2022, injunction and interim measures have been implemented in each sub-basin of the Upper Willamette system.
 To help inform the UBC IPA team's data collection and analysis, this document includes timelines of which measures have been implemented at which projects and when. 
 Data were compiled from biannual reports dated 2022-2024 (published in February and August of each year), up to and including February 2024.
-Compiled data can be downloaded from the Teams shared directory, at `General/Injunction Analysis/Feb2024_BiannualReport_timelinedata.xlsx`.
 
-<span style="font-size:200%">Data are provided graphically as visual timelines. You can also see the data in table format by clicking on the expanding arrows labelled "" underneath each timeline graph. </span>
+<!-- Compiled data can be downloaded from the Teams shared directory, at `General/Injunction Analysis/Feb2024_BiannualReport_timelinedata.xlsx`. -->
+
+This document includes implementation timelines in graphical and tabular formats. 
 
 <!-- If there are any modifications to the data file, modify the `index.Rmd` file used to create this timeline document can be re-run and new figures created.   -->
 
 ```{r, echo = F}
 custom_palette <- c(
 # Grey for regular, 
-    "#808080",
+    "#cccccc",
 # orange for flood risk, 
     "#fca311",
 # blue for injunction? 
@@ -90,24 +91,29 @@ timeline_df <- read_excel(
         event = notes)
 ```
 
-# Interpreting the timeline graphics
+# Using this file: interpreting timeline graphics and accessing tables
 
 Each graph in this webpage is interactive - you can hover over them, zoom in by highlighting the "zoom" area in the plot, and you can save each graphic with a download button.
 
-The graphics are color-coded to represent the type of event reported in the biannual injunction reports. 
-Colors of the events indicate the type of operation during that time, like so:
+<span style="font-size:120%"> The graphics are color-coded to represent the type of event reported in the biannual injunction reports. </span>
+<span style="font-size:120%"> Colors of the events indicate the type of operation during that time, like so:</span>
 
-* <span style="color:#808080; font-size:200%">Regular operations in grey</span>. Some timelines do not include regular operations (e.g., refilling reservoirs between drawdown events) because these were not reported in biannual reports; other sites do report these "regular operations".
-* <span style="color:#219ebc; font-size:200%">Injunction and interim measures (IM) in blue</span>
-* <span style="color:#fca311; font-size:200%">Flood risk management (FRM) interventions are in orange</span>
-* <span style="color:black; font-size:200%">Events are marked with black points</span>
+* <span style="color:#808080; font-size:150%">Regular operations in grey</span> <br> Some timelines do not include regular operations (e.g., refilling reservoirs between drawdown events) because these were not reported in biannual reports; other sites do report these "regular operations".
+* <span style="color:#219ebc; font-size:150%">Injunction and interim measures (IM) in blue</span>
+* <span style="color:#fca311; font-size:150%">Flood risk management (FRM) interventions are in orange</span>
+* <span style="color:black; font-size:150%">Events are marked with black points</span>
 
-You can also hover over any event's start or end point to see more details on the event. If the text runs over the boundaries of the plot, you can cross-reference the event using the tabular data below each graph.
+Underneath each graphic is an expandable box, formatted like this: "<span style="font-size:120%">View the timeline in tabular format (click to expand)</span>". 
+Clicking this will show you a table of the data in each graphic.
 
+<hr>
 
-# North Santiam injunction measures and their implementation
+# Timelines, data tables, and summaries of injunction and interim measures at each subbasin
 
-## Implementation timeline
+## North Santiam
+
+* **BCL**: Big Cliff re-regulating dam 
+* **DET**: Detroit dam and reservoir
 
 ```{r north-santiam, echo = F, width="100%"}
 vistime::vistime(timeline_df %>% filter(subbasin == "N. Santiam") %>% 
@@ -117,19 +123,21 @@ vistime::vistime(timeline_df %>% filter(subbasin == "N. Santiam") %>%
     col.fontcolor = "font_color")
 ```
 
-
-## Table of events in the timeline
-
 <details>
-    <summary>View the timeline in tabular format (click to expand)</summary>
+    <summary><span style="font-size:120%"> View the timeline in tabular format (click to expand)</span></summary>
 
 ```{r north-santiam-table, echo = F, results = 'asis'}
-knitr::kable(timeline_df %>% filter(subbasin == "N. Santiam") %>%
+knitr::kable(
+    timeline_df %>% filter(subbasin == "N. Santiam") %>%
         select(-c(newnotes, color_category, font_color, color,subbasin,group)) %>%
         relocate(event, .after = end) %>%
         # rename(project = group) %>%
         relocate(project, .before = start) %>%
         arrange(project) %>%
+        # This gets over the newline madness introduced by Excel
+        mutate(
+            event = gsub(replacement = " ", pattern = "\r\n", event, perl = T)
+        ) %>%
         rename(
             Measure = category,
             Project = project,
@@ -141,34 +149,37 @@ knitr::kable(timeline_df %>% filter(subbasin == "N. Santiam") %>%
 ```
 
 </details>
+<br>
+<details>
+    <summary><span style="font-size:120%">View summary descriptions of the injunction measures in the North Santiam (click to expand)</span></summary>
 
-## Descriptions of measures
+    <span style="font-size:120%"><br>Detroit</span>
 
-For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
+    * Some interim measures (IM) were formally adopted in the injunction, and are sometimes referred to by their IM number or the injunction measure number. For example, at Detroit Dam, injunction measure 10 is a measure to adopt IMs 5, 6, and 7. Injunction measure 10 was revised and became 10(a) on Sept 21, 2021 due to conflicts between IM 5 and IM 7.
+* **IM 5**: Once the elevation of Detroit Reservoir is less than 100 feet over the turbine intakes during the fall drawdown and winter months, generally only operate the turbines at Detroit Dam during the day and prioritize a non-turbine outlet to pass flow at night (from dusk until dawn), generally with no turbine operation during that time.
+* **IM 7**: Through strategic use of the spillway, turbines, and regulating outlets at Detroit Dam, provide downstream fish passage in the spring and water temperature management throughout late spring and summer at Detroit and Big Cliff dams.*
+* **Injunction measure 10a**: *Draft Detroit Reservoir to elevation 1,465 feet or less by October 15, 2021 and then use Detroit Dam’s lower regulating outlets for temperature control purposes.
 
-### Detroit 
+<span style="font-size:120%">Big Cliff</span>
 
-*IM: Interim measure. Some interim measures were formally adopted in the injunction, and are sometimes referred to by their interim measure number or the injunction measure number.
-For example, at Detroit Dam, injunction measure 10 is a measure to adopt interim measures 5, 6, and 7.
-Injunction measure 10 was revised and became 10(a) on Sept 21, 2021 due to conflicts between IM 5 and IM 7*. 
+* **IM 6**: When the Corps is operating the spillway at Big Cliff Dam, operate multiple spillway gates to spread total flow across the spillway. 
+  * **NOTE: The bi-annual reports do not record specific dates where multiple spillway gates were utilized at BCL to reduce TDG. It does sometimes report periods where the spillway was used at all, but this does not inform whether multiple gates were used to reduce TDG**.
+  * From the Feb. 2022 biannual report:            
+    
+    > The minimum gate opening for spill operations of each spill bay at Big Cliff is 0.75 feet. This equates to discharges that range from 770 cfs – 1130 cfs for reservoir elevations of 1182 ft. (min. conservation pool) and 1206 ft. (max. conservation pool), respectively. Under the lowest of reservoir elevations, flows cannot be spread between two bays until the total outflow is greater than 4740 cfs, which is the sum of the discharge from two spill bays at minimum gate opening plus powerhouse capacity [(770 cfs + 770 cfs = 1540 spill) + (3200 cfs powerhouse) = 4740 cfs total flow]. Under the highest reservoir elevations, flows cannot be spread between two bays until the total outflow is greater than 5070 cfs, which is the sum of the discharge from two spill bays at minimum gate opening plus powerhouse capacity [(1130 cfs + 1130 cfs = 2260 cfs spill) + 2810 cfs (powerhouse) = 5070 cfs (total flow)]. Without large flow conditions, spreading spill is limited at Big Cliff Dam.
 
-* **IM 5**: *Once the elevation of Detroit Reservoir is less than 100 feet over the turbine intakes during the fall drawdown and winter months, generally only operate the turbines at Detroit Dam during the day and prioritize a non-turbine outlet to pass flow at night (from dusk until dawn), generally with no turbine operation during that time.*
-* **IM 7**: *Through strategic use of the spillway, turbines, and regulating outlets at Detroit Dam, provide downstream fish passage in the spring and water temperature management throughout late spring and summer at Detroit and Big Cliff dams.*
+</details>
 
-* **Injunction measure 10a**: *Draft Detroit Reservoir to elevation 1,465 feet or less by October 15, 2021 and then use Detroit Dam’s lower regulating outlets for temperature control purposes.*
+<br>For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
 
-### Big Cliff 
+<hr>
 
-* **IM 6**: *When the Corps is operating the spillway at Big Cliff Dam, operate multiple spillway gates to spread total flow across the spillway*. 
-    * **NOTE: The bi-annual reports do not record specific dates where multiple spillway gates were utilized at BCL to reduce TDG. It does sometimes report periods where the spillway was used at all, but this does not inform whether multiple gates were used to reduce TDG**.
-    * From the Feb. 2022 biannual report:
-        
-        > The minimum gate opening for spill operations of each spill bay at Big Cliff is 0.75 feet. This equates to discharges that range from 770 cfs – 1130 cfs for reservoir elevations of 1182 ft. (min. conservation pool) and 1206 ft. (max. conservation pool), respectively. Under the lowest of reservoir elevations, flows cannot be spread between two bays until the total outflow is greater than 4740 cfs, which is the sum of the discharge from two spill bays at minimum gate opening plus powerhouse capacity [(770 cfs + 770 cfs = 1540 spill) + (3200 cfs powerhouse) = 4740 cfs total flow]. Under the highest reservoir elevations, flows cannot be spread between two bays until the total outflow is greater than 5070 cfs, which is the sum of the discharge from two spill bays at minimum gate opening plus powerhouse capacity [(1130 cfs + 1130 cfs = 2260 cfs spill) + 2810 cfs (powerhouse) = 5070 cfs (total flow)]. Without large flow conditions, spreading spill is limited at Big Cliff Dam.
+## South Santiam
 
+* **FOS**: Foster dam and reservoir
+* **GPR**: Green Peter dam and reservoir
 
-# South Santiam injunction measures and their implementation
-
-## Implementation timeline
+The timeline below does not show outplanting of Chinook salmon above Green Peter dam (injunction measure 11), which have occurred in summer 2022 and 2023. 
 
 ```{r south-santiam, echo = F, width="100%"}
 vistime::vistime(timeline_df %>% filter(subbasin == "S. Santiam") %>% 
@@ -178,10 +189,8 @@ vistime::vistime(timeline_df %>% filter(subbasin == "S. Santiam") %>%
     col.fontcolor = "font_color")
 ```
 
-## Table of events in the timeline
-
 <details>
-    <summary>View the timeline in tabular format (click to expand)</summary>
+    <summary><span style="font-size:120%">View the timeline in tabular format (click to expand)</span></summary>
 
 ```{r south-santiam-table, echo = F, results = 'asis'}
 knitr::kable(timeline_df %>% filter(subbasin == "S. Santiam") %>%
@@ -190,6 +199,10 @@ knitr::kable(timeline_df %>% filter(subbasin == "S. Santiam") %>%
         # rename(project = group) %>%
         relocate(project, .before = start) %>%
         arrange(project) %>%
+         # This gets over the newline madness introduced by Excel
+        mutate(
+            event = gsub(replacement = " ", pattern = "\r\n", event, perl = T)
+        ) %>%
         rename(
             Measure = category,
             Project = project,
@@ -201,25 +214,30 @@ knitr::kable(timeline_df %>% filter(subbasin == "S. Santiam") %>%
 ```
 
 </details>
+<br>
+<details>
+    <summary><span style="font-size:120%">View summary descriptions of the injunction measures in the South Santiam (click to expand)</span></summary>
 
-## Descriptions of measures
-
-For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
-
-### Foster
-
-* **13a**: Draw down Foster Reservoir to elevation 620-625 feet by October 1 and operate the Foster Dam spillway, with limited turbine operation, from one hour before sunset to one-half hour after sunrise from October 1 through December 15. 
+    <span style="font-size:120%"><br>Foster</span>
+    
+    * **13a**: Draw down Foster Reservoir to elevation 620-625 feet by October 1 and operate the Foster Dam spillway, with limited turbine operation, from one hour before sunset to one-half hour after sunrise from October 1 through December 15. 
 * **13b**: Hold Foster Reservoir at minimum conservation pool (elevation 613 feet) and operate the Foster Dam spillway, with limited turbine operation, from one hour before sunset to one-half hour after sunrise from February 1 through May 15. Beginning May 16, refill Foster Reservoir, targeting full pool by Memorial Day Weekend, and operate the Foster Dam spillway, with limited turbine operation, from one hour before sunset to one-half hour after sunrise until June 15. Beginning June 16 through mid- to late-July, operate the Foster fish weir for downstream water temperature management.
 
-### Green Peter
+<span style="font-size:120%">Green Peter</span>
 
 * **12a**: Beginning in spring 2022, once Green Peter Reservoir reaches elevation 971 ft., spill continuously (24/7) until May 1 or for at least 30 days, whichever is longer. The implementation in 2023 was influenced by poor health of surrogate fish to be released during paired releases. This caused the Corps and NMFS to decide to continue operating 24/7 spill operations in 2023 versus testing continuous spill versus nighttime-only spill (as was planned with surrogate fish).
 * **12b**: Conduct a fall drawdown of Green Peter Reservoir to a target elevation of 780 ft. by November 15 and hold at that elevation until December 15. Generally use the regulating outlets exclusively to pass flow once the reservoir is below minimum power pool (887 ft.). 
 * **11**: Outplanting above Green Peter (not shown in the graphic above, occurred in Summer 2022 and 2023).
 
-# South-fork McKenzie injunction measures and their implementation
+</details>
 
-## Implementation timeline
+<br> For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
+
+<hr>
+
+## South-fork McKenzie
+
+* **CGR:** Cougar dam
 
 ```{r mck, echo = F, width="100%"}
 vistime::vistime(timeline_df %>% filter(subbasin == "McKenzie") %>% 
@@ -229,10 +247,9 @@ vistime::vistime(timeline_df %>% filter(subbasin == "McKenzie") %>%
     col.fontcolor = "font_color")
 ```
 
-## Table of events in the timeline
 
 <details>
-    <summary>View the timeline in tabular format (click to expand)</summary>
+    <summary><span style="font-size:120%">View the timeline in tabular format (click to expand)</span></summary>
 
 ```{r mck-table, echo = F, results = 'asis'}
 knitr::kable(timeline_df %>% filter(subbasin == "McKenzie") %>%
@@ -241,6 +258,10 @@ knitr::kable(timeline_df %>% filter(subbasin == "McKenzie") %>%
         # rename(project = group) %>%
         relocate(project, .before = start) %>%
         arrange(project) %>%
+         # This gets over the newline madness introduced by Excel
+        mutate(
+            event = gsub(replacement = " ", pattern = "\r\n", event, perl = T)
+        ) %>%
         rename(
             Measure = category,
             Project = project,
@@ -251,21 +272,27 @@ knitr::kable(timeline_df %>% filter(subbasin == "McKenzie") %>%
     "pipe", results = "asis")
 ```
 
+</details>
+<br>
+<details>
+    <summary><span style="font-size:120%">View summary descriptions of the injunction measures in the South Fork McKenzie (click to expand)</span></summary>
+
+    <span style="font-size:120%"><br>Cougar</span>
+    
+    * **14**: Conduct a fall drawdown of Cougar Reservoir to a target elevation of 1,505 feet by November 15 until December 15 and generally use the regulating outlets exclusively during that time to pass flow. 
+* **15a**: On December 16, initiate the refill of Cougar Reservoir to minimum conservation pool (elevation 1,532 feet) and hold until March 1. On March 1, begin drafting Cougar Reservoir to reach elevation 1,520 feet by April 1. Using adaptive management to determine the refill starting date, delay the refill of Cougar Reservoir from elevation 1,520 feet as long as possible while maintaining a high likelihood of reaching elevation 1,571 feet by July 1 to enable use of the water temperature control tower in late summer and fall. From December 16 through June 1, prioritize the regulating outlets at night to pass flows. In September, transition to the fall drawdown operation. 
 
 </details>
 
-## Descriptions of measures
+<br>For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
 
-For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
+<hr>
 
-### Cougar Dam
+## Middle Fork 
 
-* **14**: Conduct a fall drawdown of Cougar Reservoir to a target elevation of 1,505 feet by November 15 until December 15 and generally use the regulating outlets exclusively during that time to pass flow. 
-* **15a**: On December 16, initiate the refill of Cougar Reservoir to minimum conservation pool (elevation 1,532 feet) and hold until March 1. On March 1, begin drafting Cougar Reservoir to reach elevation 1,520 feet by April 1. Using adaptive management to determine the refill starting date, delay the refill of Cougar Reservoir from elevation 1,520 feet as long as possible while maintaining a high likelihood of reaching elevation 1,571 feet by July 1 to enable use of the water temperature control tower in late summer and fall. From December 16 through June 1, prioritize the regulating outlets at night to pass flows. In September, transition to the fall drawdown operation. 
-
-# Middle Fork Willamette injunction measures and their implementation
-
-## Implementation timeline
+* **FCR**: Fall Creek dam and reservoir
+* **HCR**: Hills Creek dam and reservoir
+* **LOP**: Lookout Point/Dexter dam and reservoir
 
 ```{r middle-fork, echo = F, width="100%"}
 vistime::vistime(timeline_df %>% filter(subbasin == "Middle Fork") %>% 
@@ -275,10 +302,8 @@ vistime::vistime(timeline_df %>% filter(subbasin == "Middle Fork") %>%
     col.fontcolor = "font_color")
 ```
 
-## Table of events in the timeline
-
 <details>
-    <summary>View the timeline in tabular format (click to expand)</summary>
+    <summary><span style="font-size:120%">View the timeline in tabular format (click to expand)</span></summary>
 
 ```{r middle-fork-table, echo = F, results = 'asis'}
 knitr::kable(timeline_df %>% filter(subbasin == "Middle Fork") %>%
@@ -287,6 +312,10 @@ knitr::kable(timeline_df %>% filter(subbasin == "Middle Fork") %>%
     # rename(project = group) %>%
         relocate(project, .before = start) %>%
         arrange(project) %>%
+         # This gets over the newline madness introduced by Excel
+        mutate(
+            event = gsub(replacement = " ", pattern = "\r\n", event, perl = T)
+        ) %>%
         rename(
             Measure = category,
             Project = project,
@@ -298,22 +327,25 @@ knitr::kable(timeline_df %>% filter(subbasin == "Middle Fork") %>%
 ```
 
 </details>
+<br>
+<details>
+    <summary><span style="font-size:120%">View summary descriptions of the injunction measures in the North Santiam (click to expand)</span></summary>
 
-## Descriptions of measures
+    <span style="font-size:120%"><br>Hills Creek</span>
 
-For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
+    * **8/IM 20**: Implement RO spill operations daily from 6-10 p.m. at Hills Creek Dam once the reservoir elevation is 50 feet or less above the regulating outlets in the fall through March 1. 
 
-### Hills Creek
-
-* **8/IM 20**: Implement RO spill operations daily from 6-10 p.m. at Hills Creek Dam once the reservoir elevation is 50 feet or less above the regulating outlets in the fall through March 1. 
-
-### Lookout Point/Dexter dams
+<span style="font-size:120%">Lookout Point/Dexter dams</span>
 
 * **17**: Use storage from Hills Creek Reservoir to begin refilling Lookout Point Reservoir in early March. Once Lookout Point Reservoir reaches elevation 890 ft., spill water over the spillways 24/7 for at least 30 days at both Lookout Point and Dexter dams while maintaining the elevation of Lookout Point Reservoir between 890-893 ft. During that time, generally do not operate the turbines at both projects, with limited exceptions. After that initial 30-day period, spill at night at both projects, with generation during the day, for as long as water is available and downstream conditions allow. Then manage Lookout Point Reservoir to achieve elevation 887.5 ft. by July 15, 2022 and operate the regulating outlets as needed to reduce downstream water temperatures when water temperatures downstream of Dexter Dam near 60 degrees.
 * **16**: Annual Lookout Point Reservoir deep drawdown operation from November 15 through December 15.
 
 
-### Fall Creek
+<span style="font-size:120%">Fall Creek</span>
 
 * **19**: Annual Fall Creek Reservoir deep drawdown operation similar to prior years but extend the dates from December 1 through January 15.
 * **20**: On January 16, begin the refill of Fall Creek Reservoir to elevation 700 feet and hold at that elevation through March 15. On March 16, initiate the refill to reach elevation 728 feet by April 15 and maintain that elevation through May 15 unless additional refill is necessary to ensure operation of the Fall Creek Adult Fish Collection Facility through September 30. After May 15, refill the reservoir to the extent possible. 
+
+</details>
+
+<br>For full details, see implementation plans on the [Willamette Injunction website](https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/).
