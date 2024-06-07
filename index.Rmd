@@ -157,8 +157,8 @@ knitr::kable(
 
     * Some interim measures (IM) were formally adopted in the injunction, and are sometimes referred to by their IM number or the injunction measure number. For example, at Detroit Dam, injunction measure 10 is a measure to adopt IMs 5, 6, and 7. Injunction measure 10 was revised and became 10(a) on Sept 21, 2021 due to conflicts between IM 5 and IM 7.
 * **IM 5**: Once the elevation of Detroit Reservoir is less than 100 feet over the turbine intakes during the fall drawdown and winter months, generally only operate the turbines at Detroit Dam during the day and prioritize a non-turbine outlet to pass flow at night (from dusk until dawn), generally with no turbine operation during that time.
-* **IM 7**: Through strategic use of the spillway, turbines, and regulating outlets at Detroit Dam, provide downstream fish passage in the spring and water temperature management throughout late spring and summer at Detroit and Big Cliff dams.*
-* **Injunction measure 10a**: *Draft Detroit Reservoir to elevation 1,465 feet or less by October 15, 2021 and then use Detroit Dam’s lower regulating outlets for temperature control purposes.
+* **IM 7**: Through strategic use of the spillway, turbines, and regulating outlets at Detroit Dam, provide downstream fish passage in the spring and water temperature management throughout late spring and summer at Detroit and Big Cliff dams.
+* **Injunction measure 10a**: Draft Detroit Reservoir to elevation 1,465 feet or less by October 15, 2021 and then use Detroit Dam’s lower regulating outlets for temperature control purposes.
 
 <span style="font-size:120%">Big Cliff</span>
 
