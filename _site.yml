@@ -1,0 +1,11 @@
+name: "wvs-injunction-webpage"
+navbar:
+  title: "WVS Injunction Assessment"
+  left: 
+    - text: "Injunction timeline"
+      href: timeline_static.html
+    - text: "RST location map"
+      href: rst_map.html
+output:
+  html_document:
+    theme: flatly

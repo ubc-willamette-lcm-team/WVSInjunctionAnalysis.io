@@ -1,0 +1,41 @@
+---
+title: "WVS Injunction: RST Map"
+author: "Mairin Deith, m.deith@oceans.ubc.ca"
+date: "`r paste0('Last updated on ', format(Sys.time(), '%Y-%b-%d'))`"
+output:
+  html_document:
+    number_sections: false
+    theme: flatly
+---
+
+# Background 
+
+Rotary screw traps (RSTs) are used to monitor downstream migration of salmonids throughout the Willamette Valley basin. 
+The locations of the RSTs, years of operation, and operator IDs are described in the map below, and in an interactive data table. 
+
+# Map 
+
+```{r map-it, echo = F, message = F, warning = F, width = "100%"}
+setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
+setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
+
+library(ggplot2)
+library(plotly)
+
+overview_map_ggplotly <- readRDS("data/2024_06_24_rst_map_compiled.Rds")
+overview_map_ggplotly
+```
+
+# Data table
+
+```{r table-it, echo = F, message = F, warning = F}
+library(DT)
+library(readxl)
+
+rst_raw <- read_xlsx("data/Summary of available RST data.xlsx", 
+    sheet = "Trap Locations") %>%
+    # The "notes" column has no header, fix
+    rename(Notes = `...12`)
+    
+datatable(rst_raw)
+```
