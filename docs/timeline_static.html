@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Mairin Deith, m.deith@oceans.ubc.ca" />
+
+
+<title>Willamette Valley System Injunction: Implementation timelines as reported in biannual reports</title>
+
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">WVS Injunction Assessment</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="timeline_static.html">Injunction timeline</a>
+</li>
+<li>
+  <a href="rst_map.html">RST location map</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Willamette Valley System Injunction:
+Implementation timelines as reported in biannual reports</h1>
+<h4 class="author">Mairin Deith, <a href="mailto:m.deith@oceans.ubc.ca"
+class="email">m.deith@oceans.ubc.ca</a></h4>
+<h4 class="date">Last updated on 2024-Jun-24</h4>
+
+</div>
+
+
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>Since spring 2022, injunction and interim measures have been
+implemented in each sub-basin of the Upper Willamette system. To help
+inform the UBC IPA team’s data collection and analysis, this document
+includes timelines of which measures have been implemented at which
+projects and when. Data were compiled from biannual reports dated
+2022-2024 (published in February and August of each year), up to and
+including February 2024.</p>
+<!-- Compiled data can be downloaded from the Teams shared directory, at `General/Injunction Analysis/Feb2024_BiannualReport_timelinedata.xlsx`. -->
+<p>This document includes implementation timelines in graphical and
+tabular formats.</p>
+<!-- If there are any modifications to the data file, modify the `index.Rmd` file used to create this timeline document can be re-run and new figures created.   -->
+</div>
+<div
+id="using-this-file-interpreting-timeline-graphics-and-accessing-tables"
+class="section level1">
+<h1>Using this file: interpreting timeline graphics and accessing
+tables</h1>
+<p>Each graph in this webpage is interactive - you can hover over them,
+zoom in by highlighting the “zoom” area in the plot, and you can save
+each graphic with a download button.</p>
+<p><span style="font-size:120%"> The graphics are color-coded to
+represent the type of event reported in the biannual injunction reports.
+</span> <span style="font-size:120%"> Colors of the events indicate the
+type of operation during that time, like so:</span></p>
+<ul>
+<li><span style="color:#808080; font-size:150%">Regular operations in
+grey</span> <br> Some timelines do not include regular operations (e.g.,
+refilling reservoirs between drawdown events) because these were not
+reported in biannual reports; other sites do report these “regular
+operations”.</li>
+<li><span style="color:#219ebc; font-size:150%">Injunction and interim
+measures (IM) in blue</span></li>
+<li><span style="color:#fca311; font-size:150%">Flood risk management
+(FRM) interventions are in orange</span></li>
+<li><span style="color:black; font-size:150%">Events are marked with
+black points</span></li>
+</ul>
+<p>Underneath each graphic is an expandable box, formatted like this:
+“<span style="font-size:120%">View the timeline in tabular format (click
+to expand)</span>”. Clicking this will show you a table of the data in
+each graphic.</p>
+<hr>
+</div>
+<div
+id="timelines-data-tables-and-summaries-of-injunction-and-interim-measures-at-each-subbasin"
+class="section level1">
+<h1>Timelines, data tables, and summaries of injunction and interim
+measures at each subbasin</h1>
+<div id="north-santiam" class="section level2">
+<h2>North Santiam</h2>
+<ul>
+<li><strong>BCL</strong>: Big Cliff re-regulating dam</li>
+<li><strong>DET</strong>: Detroit dam and reservoir</li>
+</ul>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-39bd5bfed6e433b8acc4" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-39bd5bfed6e433b8acc4">{"x":{"visdat":{"7af8179f6189":["function () ","plotlyVisDat"]},"cur_data":"7af8179f6189","attrs":{"7af8179f6189":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"7af8179f6189.1":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-11-17 00:00:00.000000","2021-11-24 00:00:00.000000"],"y":12,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Only during one of two involuntary spill events in\r<br />Nov/Dec 2021 was there sufficient flow to split \r<br />across gates<\/b><br>from <b>2021-11-17<\/b> to <b>2021-11-24<\/b>","inherit":true},"7af8179f6189.2":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-01-01 00:00:00.000000","2022-12-31 00:00:00.000000"],"y":12,"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>\"Spill split where possible\"; limited effect<\/b><br>from <b>2022-01-01<\/b> to <b>2022-12-31<\/b>","inherit":true},"7af8179f6189.3":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-01-01 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":12,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Maximized efforts (maximized turbine operations \r<br />and spreading spill) but did not prevent excessive \r<br />TDG  in some periods when LRO and URO \r<br />operated at Detroit<\/b><br>from <b>2023-01-01<\/b> to <b>2023-12-31<\/b>","inherit":true},"7af8179f6189.4":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-09-27 00:00:00.000000","2021-10-13 00:00:00.000000"],"y":10,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Prepare for drawdown and prioritize non-turbine \r<br />outlet during night<\/b><br>from <b>2021-09-27<\/b> to <b>2021-10-13<\/b>","inherit":true},"7af8179f6189.5":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-10-13 00:00:00.000000","2021-11-05 00:00:00.000000"],"y":10,"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Limited success (hot/dry weather; low inflows/low \r<br />reservoir elevations limit spillway operations to only \r<br />2 months instead of 4 which left lots of hot water; \r<br />early drawdown and use of cold water storage in \r<br />Detroit in the fall)<\/b><br>from <b>2021-10-13<\/b> to <b>2021-11-05<\/b>","inherit":true},"7af8179f6189.6":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-11-05 00:00:00.000000","2022-03-04 00:00:00.000000"],"y":10,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Upper RO prioritization at night<\/b><br>from <b>2021-11-05<\/b> to <b>2022-03-04<\/b>","inherit":true},"7af8179f6189.7":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-10-09 00:00:00.000000","2022-11-02 00:00:00.000000"],"y":10,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>URO use for temp control<\/b><br>from <b>2022-10-09<\/b> to <b>2022-11-02<\/b>","inherit":true},"7af8179f6189.8":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-11-02 00:00:00.000000","2022-11-05 00:00:00.000000"],"y":10,"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>LRO use<\/b><br>from <b>2022-11-02<\/b> to <b>2022-11-05<\/b>","inherit":true},"7af8179f6189.9":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-11-05 00:00:00.000000","2023-04-14 00:00:00.000000"],"y":10,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Upper RO prioritization at night<\/b><br>from <b>2022-11-05<\/b> to <b>2023-04-14<\/b>","inherit":true},"7af8179f6189.10":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-11-13 00:00:00.000000","2022-11-17 00:00:00.000000"],"y":9,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>LRO use<\/b><br>from <b>2022-11-13<\/b> to <b>2022-11-17<\/b>","inherit":true},"7af8179f6189.11":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-09-28 00:00:00.000000","2023-11-25 00:00:00.000000"],"y":10,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>NA<\/b><br>from <b>2023-09-28<\/b> to <b>2023-11-25<\/b>","inherit":true},"7af8179f6189.12":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-11-25 00:00:00.000000","2023-12-03 00:00:00.000000"],"y":10,"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>LRO use<\/b><br>from <b>2023-11-25<\/b> to <b>2023-12-03<\/b>","inherit":true},"7af8179f6189.13":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":10,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>NA<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-31<\/b>","inherit":true},"7af8179f6189.14":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-04-08 00:00:00.000000","2022-09-23 00:00:00.000000"],"y":7,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Spillway releases for temperature control<\/b><br>from <b>2022-04-08<\/b> to <b>2022-09-23<\/b>","inherit":true},"7af8179f6189.15":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-05-01 00:00:00.000000","2023-08-14 00:00:00.000000"],"y":7,"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Spillway + turbine to management downstream \r<br />temperatures<\/b><br>from <b>2023-05-01<\/b> to <b>2023-08-14<\/b>","inherit":true},"7af8179f6189.16":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-11-05 00:00:00.000000","2022-11-17 00:00:00.000000"],"y":3,"line":{"color":"#fca311","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>URO use for flood risk mitigation<\/b><br>from <b>2022-11-05<\/b> to <b>2022-11-17<\/b>","inherit":true},"7af8179f6189.17":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-20 00:00:00.000000"],"y":3,"line":{"color":"#fca311","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Atmospheric river; flood risk management<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-20<\/b>","inherit":true},"7af8179f6189.18":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-03-04 00:00:00.000000","2022-04-08 00:00:00.000000"],"y":1,"line":{"color":"#cccccc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Refilling<\/b><br>from <b>2022-03-04<\/b> to <b>2022-04-08<\/b>","inherit":true},"7af8179f6189.19":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-02-01 00:00:00.000000","2023-05-01 00:00:00.000000"],"y":1,"line":{"color":"#cccccc","width":25},"showlegend":false,"hoverinfo":"text","text":"<b>Reservoir refilling<\/b><br>from <b>2023-02-01<\/b> to <b>2023-05-01<\/b>","inherit":true},"7af8179f6189.20":{"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-09-21 00:00:00.000000","2022-11-17 00:00:00.000000"],"y":[5,5],"marker":{"color":["black","black"],"size":17.5,"symbol":"circle","line":{"color":"black","width":1}},"showlegend":false,"hoverinfo":"text","text":["<b>10/IM5 Revised due to conflict with 10a/7; \r<br />temperature operations prioritized over \r<br />downstream FP: 2021-09-21<\/b>","<b>Reservoir deemed isothermal: 2022-11-17<\/b>"],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","plot_bgcolor":"#FCFCFC","shapes":[{"type":"line","x0":0,"x1":1,"xref":"paper","y0":2,"y1":2,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":4,"y1":4,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":6,"y1":6,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":8,"y1":8,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":11,"y1":11,"line":{"color":"grey65","width":0.5}}],"xaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"showgrid":true,"gridcolor":"grey90","title":""},"yaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"range":[0,13],"showgrid":false,"title":"","tickmode":"array","tickvals":[12,9.9000000000000004,7,5,3,1],"ticktext":["BCL: 10/IM 6","DET: 10/IM 5","DET: 10a/IM 7","DET: Event","DET: Flood risk mgt.","DET: Reported regular ops."]},"showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-11-17 00:00:00.000000","2021-11-24 00:00:00.000000"],"y":[12,12],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Only during one of two involuntary spill events in\r<br />Nov/Dec 2021 was there sufficient flow to split \r<br />across gates<\/b><br>from <b>2021-11-17<\/b> to <b>2021-11-24<\/b>","<b>Only during one of two involuntary spill events in\r<br />Nov/Dec 2021 was there sufficient flow to split \r<br />across gates<\/b><br>from <b>2021-11-17<\/b> to <b>2021-11-24<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-01-01 00:00:00.000000","2022-12-31 00:00:00.000000"],"y":[12,12],"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>\"Spill split where possible\"; limited effect<\/b><br>from <b>2022-01-01<\/b> to <b>2022-12-31<\/b>","<b>\"Spill split where possible\"; limited effect<\/b><br>from <b>2022-01-01<\/b> to <b>2022-12-31<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-01-01 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":[12,12],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Maximized efforts (maximized turbine operations \r<br />and spreading spill) but did not prevent excessive \r<br />TDG  in some periods when LRO and URO \r<br />operated at Detroit<\/b><br>from <b>2023-01-01<\/b> to <b>2023-12-31<\/b>","<b>Maximized efforts (maximized turbine operations \r<br />and spreading spill) but did not prevent excessive \r<br />TDG  in some periods when LRO and URO \r<br />operated at Detroit<\/b><br>from <b>2023-01-01<\/b> to <b>2023-12-31<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-09-27 00:00:00.000000","2021-10-13 00:00:00.000000"],"y":[10,10],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Prepare for drawdown and prioritize non-turbine \r<br />outlet during night<\/b><br>from <b>2021-09-27<\/b> to <b>2021-10-13<\/b>","<b>Prepare for drawdown and prioritize non-turbine \r<br />outlet during night<\/b><br>from <b>2021-09-27<\/b> to <b>2021-10-13<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-10-13 00:00:00.000000","2021-11-05 00:00:00.000000"],"y":[10,10],"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Limited success (hot/dry weather; low inflows/low \r<br />reservoir elevations limit spillway operations to only \r<br />2 months instead of 4 which left lots of hot water; \r<br />early drawdown and use of cold water storage in \r<br />Detroit in the fall)<\/b><br>from <b>2021-10-13<\/b> to <b>2021-11-05<\/b>","<b>Limited success (hot/dry weather; low inflows/low \r<br />reservoir elevations limit spillway operations to only \r<br />2 months instead of 4 which left lots of hot water; \r<br />early drawdown and use of cold water storage in \r<br />Detroit in the fall)<\/b><br>from <b>2021-10-13<\/b> to <b>2021-11-05<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-11-05 00:00:00.000000","2022-03-04 00:00:00.000000"],"y":[10,10],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Upper RO prioritization at night<\/b><br>from <b>2021-11-05<\/b> to <b>2022-03-04<\/b>","<b>Upper RO prioritization at night<\/b><br>from <b>2021-11-05<\/b> to <b>2022-03-04<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-10-09 00:00:00.000000","2022-11-02 00:00:00.000000"],"y":[10,10],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>URO use for temp control<\/b><br>from <b>2022-10-09<\/b> to <b>2022-11-02<\/b>","<b>URO use for temp control<\/b><br>from <b>2022-10-09<\/b> to <b>2022-11-02<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-11-02 00:00:00.000000","2022-11-05 00:00:00.000000"],"y":[10,10],"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>LRO use<\/b><br>from <b>2022-11-02<\/b> to <b>2022-11-05<\/b>","<b>LRO use<\/b><br>from <b>2022-11-02<\/b> to <b>2022-11-05<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-11-05 00:00:00.000000","2023-04-14 00:00:00.000000"],"y":[10,10],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Upper RO prioritization at night<\/b><br>from <b>2022-11-05<\/b> to <b>2023-04-14<\/b>","<b>Upper RO prioritization at night<\/b><br>from <b>2022-11-05<\/b> to <b>2023-04-14<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-11-13 00:00:00.000000","2022-11-17 00:00:00.000000"],"y":[9,9],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>LRO use<\/b><br>from <b>2022-11-13<\/b> to <b>2022-11-17<\/b>","<b>LRO use<\/b><br>from <b>2022-11-13<\/b> to <b>2022-11-17<\/b>"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-09-28 00:00:00.000000","2023-11-25 00:00:00.000000"],"y":[10,10],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>NA<\/b><br>from <b>2023-09-28<\/b> to <b>2023-11-25<\/b>","<b>NA<\/b><br>from <b>2023-09-28<\/b> to <b>2023-11-25<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-11-25 00:00:00.000000","2023-12-03 00:00:00.000000"],"y":[10,10],"line":{"color":"#0a647a","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>LRO use<\/b><br>from <b>2023-11-25<\/b> to <b>2023-12-03<\/b>","<b>LRO use<\/b><br>from <b>2023-11-25<\/b> to <b>2023-12-03<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":[10,10],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>NA<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-31<\/b>","<b>NA<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-31<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-04-08 00:00:00.000000","2022-09-23 00:00:00.000000"],"y":[7,7],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Spillway releases for temperature control<\/b><br>from <b>2022-04-08<\/b> to <b>2022-09-23<\/b>","<b>Spillway releases for temperature control<\/b><br>from <b>2022-04-08<\/b> to <b>2022-09-23<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-05-01 00:00:00.000000","2023-08-14 00:00:00.000000"],"y":[7,7],"line":{"color":"#219ebc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Spillway + turbine to management downstream \r<br />temperatures<\/b><br>from <b>2023-05-01<\/b> to <b>2023-08-14<\/b>","<b>Spillway + turbine to management downstream \r<br />temperatures<\/b><br>from <b>2023-05-01<\/b> to <b>2023-08-14<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-11-05 00:00:00.000000","2022-11-17 00:00:00.000000"],"y":[3,3],"line":{"color":"#fca311","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>URO use for flood risk mitigation<\/b><br>from <b>2022-11-05<\/b> to <b>2022-11-17<\/b>","<b>URO use for flood risk mitigation<\/b><br>from <b>2022-11-05<\/b> to <b>2022-11-17<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-20 00:00:00.000000"],"y":[3,3],"line":{"color":"#fca311","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Atmospheric river; flood risk management<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-20<\/b>","<b>Atmospheric river; flood risk management<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-20<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-03-04 00:00:00.000000","2022-04-08 00:00:00.000000"],"y":[1,1],"line":{"color":"#cccccc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Refilling<\/b><br>from <b>2022-03-04<\/b> to <b>2022-04-08<\/b>","<b>Refilling<\/b><br>from <b>2022-03-04<\/b> to <b>2022-04-08<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-02-01 00:00:00.000000","2023-05-01 00:00:00.000000"],"y":[1,1],"line":{"color":"#cccccc","width":25},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Reservoir refilling<\/b><br>from <b>2023-02-01<\/b> to <b>2023-05-01<\/b>","<b>Reservoir refilling<\/b><br>from <b>2023-02-01<\/b> to <b>2023-05-01<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"markers","type":"scatter","x":["2021-09-21 00:00:00.000000","2022-11-17 00:00:00.000000"],"y":[5,5],"marker":{"color":["black","black"],"size":17.5,"symbol":"circle","line":{"color":"black","width":1}},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>10/IM5 Revised due to conflict with 10a/7; \r<br />temperature operations prioritized over \r<br />downstream FP: 2021-09-21<\/b>","<b>Reservoir deemed isothermal: 2022-11-17<\/b>"],"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<details>
+<summary>
+<span style="font-size:120%"> View the timeline in tabular format (click
+to expand)</span>
+</summary>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="2%" />
+<col width="3%" />
+<col width="3%" />
+<col width="81%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Measure</th>
+<th align="left">Project</th>
+<th align="left">Start</th>
+<th align="left">End</th>
+<th align="left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">10/IM 6</td>
+<td align="left">BCL</td>
+<td align="left">2021-11-17</td>
+<td align="left">2021-11-24</td>
+<td align="left">Only during one of two involuntary spill events in
+Nov/Dec 2021 was there sufficient flow to split across gates</td>
+</tr>
+<tr class="even">
+<td align="left">10/IM 6</td>
+<td align="left">BCL</td>
+<td align="left">2022-01-01</td>
+<td align="left">2022-12-31</td>
+<td align="left">“Spill split where possible”; limited effect</td>
+</tr>
+<tr class="odd">
+<td align="left">10/IM 6</td>
+<td align="left">BCL</td>
+<td align="left">2023-01-01</td>
+<td align="left">2023-12-31</td>
+<td align="left">Maximized efforts (maximized turbine operations and
+spreading spill) but did not prevent excessive TDG in some periods when
+LRO and URO operated at Detroit</td>
+</tr>
+<tr class="even">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2021-09-27</td>
+<td align="left">2021-10-13</td>
+<td align="left">Prepare for drawdown and prioritize non-turbine outlet
+during night</td>
+</tr>
+<tr class="odd">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2021-10-13</td>
+<td align="left">2021-11-05</td>
+<td align="left">Limited success (hot/dry weather; low inflows/low
+reservoir elevations limit spillway operations to only 2 months instead
+of 4 which left lots of hot water; early drawdown and use of cold water
+storage in Detroit in the fall)</td>
+</tr>
+<tr class="even">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2021-11-05</td>
+<td align="left">2022-03-04</td>
+<td align="left">Upper RO prioritization at night</td>
+</tr>
+<tr class="odd">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2022-10-09</td>
+<td align="left">2022-11-02</td>
+<td align="left">URO use for temp control</td>
+</tr>
+<tr class="even">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2022-11-02</td>
+<td align="left">2022-11-05</td>
+<td align="left">LRO use</td>
+</tr>
+<tr class="odd">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2022-11-05</td>
+<td align="left">2023-04-14</td>
+<td align="left">Upper RO prioritization at night</td>
+</tr>
+<tr class="even">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2022-11-13</td>
+<td align="left">2022-11-17</td>
+<td align="left">LRO use</td>
+</tr>
+<tr class="odd">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2023-09-28</td>
+<td align="left">2023-11-25</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2023-11-25</td>
+<td align="left">2023-12-03</td>
+<td align="left">LRO use</td>
+</tr>
+<tr class="odd">
+<td align="left">10/IM 5</td>
+<td align="left">DET</td>
+<td align="left">2023-12-03</td>
+<td align="left">2023-12-31</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">10a/IM 7</td>
+<td align="left">DET</td>
+<td align="left">2022-04-08</td>
+<td align="left">2022-09-23</td>
+<td align="left">Spillway releases for temperature control</td>
+</tr>
+<tr class="odd">
+<td align="left">10a/IM 7</td>
+<td align="left">DET</td>
+<td align="left">2023-05-01</td>
+<td align="left">2023-08-14</td>
+<td align="left">Spillway + turbine to management downstream
+temperatures</td>
+</tr>
+<tr class="even">
+<td align="left">Event</td>
+<td align="left">DET</td>
+<td align="left">2021-09-21</td>
+<td align="left">2021-09-21</td>
+<td align="left">10/IM5 Revised due to conflict with 10a/7; temperature
+operations prioritized over downstream FP</td>
+</tr>
+<tr class="odd">
+<td align="left">Event</td>
+<td align="left">DET</td>
+<td align="left">2022-11-17</td>
+<td align="left">2022-11-17</td>
+<td align="left">Reservoir deemed isothermal</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">DET</td>
+<td align="left">2022-11-05</td>
+<td align="left">2022-11-17</td>
+<td align="left">URO use for flood risk mitigation</td>
+</tr>
+<tr class="odd">
+<td align="left">Flood risk mgt.</td>
+<td align="left">DET</td>
+<td align="left">2023-12-03</td>
+<td align="left">2023-12-20</td>
+<td align="left">Atmospheric river; flood risk management</td>
+</tr>
+<tr class="even">
+<td align="left">Reported regular ops.</td>
+<td align="left">DET</td>
+<td align="left">2022-03-04</td>
+<td align="left">2022-04-08</td>
+<td align="left">Refilling</td>
+</tr>
+<tr class="odd">
+<td align="left">Reported regular ops.</td>
+<td align="left">DET</td>
+<td align="left">2023-02-01</td>
+<td align="left">2023-05-01</td>
+<td align="left">Reservoir refilling</td>
+</tr>
+</tbody>
+</table>
+</details>
+<br>
+<details>
+<summary>
+<span style="font-size:120%">View summary descriptions of the injunction
+measures in the North Santiam (click to expand)</span>
+</summary>
+<p><span style="font-size:120%"><br>Detroit</span></p>
+<ul>
+<li>Some interim measures (IM) were formally adopted in the injunction,
+and are sometimes referred to by their IM number or the injunction
+measure number. For example, at Detroit Dam, injunction measure 10 is a
+measure to adopt IMs 5, 6, and 7. Injunction measure 10 was revised and
+became 10(a) on Sept 21, 2021 due to conflicts between IM 5 and IM
+7.</li>
+<li><strong>IM 5</strong>: Once the elevation of Detroit Reservoir is
+less than 100 feet over the turbine intakes during the fall drawdown and
+winter months, generally only operate the turbines at Detroit Dam during
+the day and prioritize a non-turbine outlet to pass flow at night (from
+dusk until dawn), generally with no turbine operation during that
+time.</li>
+<li><strong>IM 7</strong>: Through strategic use of the spillway,
+turbines, and regulating outlets at Detroit Dam, provide downstream fish
+passage in the spring and water temperature management throughout late
+spring and summer at Detroit and Big Cliff dams.</li>
+<li><strong>Injunction measure 10a</strong>: Draft Detroit Reservoir to
+elevation 1,465 feet or less by October 15, 2021 and then use Detroit
+Dam’s lower regulating outlets for temperature control purposes.</li>
+</ul>
+<p><span style="font-size:120%">Big Cliff</span></p>
+<ul>
+<li><strong>IM 6</strong>: When the Corps is operating the spillway at
+Big Cliff Dam, operate multiple spillway gates to spread total flow
+across the spillway.
+<ul>
+<li><p><strong>NOTE: The bi-annual reports do not record specific dates
+where multiple spillway gates were utilized at BCL to reduce TDG. It
+does sometimes report periods where the spillway was used at all, but
+this does not inform whether multiple gates were used to reduce
+TDG</strong>.</p></li>
+<li><p>From the Feb. 2022 biannual report:</p>
+<blockquote>
+<p>The minimum gate opening for spill operations of each spill bay at
+Big Cliff is 0.75 feet. This equates to discharges that range from 770
+cfs – 1130 cfs for reservoir elevations of 1182 ft. (min. conservation
+pool) and 1206 ft. (max. conservation pool), respectively. Under the
+lowest of reservoir elevations, flows cannot be spread between two bays
+until the total outflow is greater than 4740 cfs, which is the sum of
+the discharge from two spill bays at minimum gate opening plus
+powerhouse capacity [(770 cfs + 770 cfs = 1540 spill) + (3200 cfs
+powerhouse) = 4740 cfs total flow]. Under the highest reservoir
+elevations, flows cannot be spread between two bays until the total
+outflow is greater than 5070 cfs, which is the sum of the discharge from
+two spill bays at minimum gate opening plus powerhouse capacity [(1130
+cfs + 1130 cfs = 2260 cfs spill) + 2810 cfs (powerhouse) = 5070 cfs
+(total flow)]. Without large flow conditions, spreading spill is limited
+at Big Cliff Dam.</p>
+</blockquote></li>
+</ul></li>
+</ul>
+</details>
+<p><br>For full details, see implementation plans on the <a
+href="https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/">Willamette
+Injunction website</a>.</p>
+<hr>
+</div>
+<div id="south-santiam" class="section level2">
+<h2>South Santiam</h2>
+<ul>
+<li><strong>FOS</strong>: Foster dam and reservoir</li>
+<li><strong>GPR</strong>: Green Peter dam and reservoir</li>
+</ul>
+<p>The timeline below does not show outplanting of Chinook salmon above
+Green Peter dam (injunction measure 11), which have occurred in summer
+2022 and 2023.</p>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-890d8c87b3a5f0a43176" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-890d8c87b3a5f0a43176">{"x":{"visdat":{"7af82ed25e3b":["function () ","plotlyVisDat"]},"cur_data":"7af82ed25e3b","attrs":{"7af82ed25e3b":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"7af82ed25e3b.1":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-10-01 00:00:00.000000","2021-12-15 00:00:00.000000"],"y":13,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Utilize spillway for improved passage<\/b><br>from <b>2021-10-01<\/b> to <b>2021-12-15<\/b>","inherit":true},"7af82ed25e3b.2":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-10-01 00:00:00.000000","2022-12-15 00:00:00.000000"],"y":13,"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Nighttime spill and daytime generation<\/b><br>from <b>2022-10-01<\/b> to <b>2022-12-15<\/b>","inherit":true},"7af82ed25e3b.3":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-10-01 00:00:00.000000","2023-12-15 00:00:00.000000"],"y":13,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Nighttime spill and daytime generation<\/b><br>from <b>2023-10-01<\/b> to <b>2023-12-15<\/b>","inherit":true},"7af82ed25e3b.4":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-02-01 00:00:00.000000","2022-05-15 00:00:00.000000"],"y":11,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Delay refill and nighttime spill prioritization<\/b><br>from <b>2022-02-01<\/b> to <b>2022-05-15<\/b>","inherit":true},"7af82ed25e3b.5":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-05-16 00:00:00.000000","2022-06-15 00:00:00.000000"],"y":11,"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Reservoir refill but continue nighttime spill \r<br />prioritization<\/b><br>from <b>2022-05-16<\/b> to <b>2022-06-15<\/b>","inherit":true},"7af82ed25e3b.6":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-06-16 00:00:00.000000","2022-08-01 00:00:00.000000"],"y":11,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Summer fish weir operation<\/b><br>from <b>2022-06-16<\/b> to <b>2022-08-01<\/b>","inherit":true},"7af82ed25e3b.7":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-01-01 00:00:00.000000","2023-05-15 00:00:00.000000"],"y":11,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Delayed refill and downstream FP<\/b><br>from <b>2023-01-01<\/b> to <b>2023-05-15<\/b>","inherit":true},"7af82ed25e3b.8":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-05-15 00:00:00.000000","2023-06-15 00:00:00.000000"],"y":11,"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Reservoir refill but continued nighttime spill \r<br />prioritization<\/b><br>from <b>2023-05-15<\/b> to <b>2023-06-15<\/b>","inherit":true},"7af82ed25e3b.9":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-06-16 00:00:00.000000","2023-08-01 00:00:00.000000"],"y":11,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Summer fish weir operation<\/b><br>from <b>2023-06-16<\/b> to <b>2023-08-01<\/b>","inherit":true},"7af82ed25e3b.10":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-09-06 00:00:00.000000","2022-10-01 00:00:00.000000"],"y":9,"line":{"color":"#cccccc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Gradual drawdown \"just after labor day weekend\" \r<br />(estimated date)<\/b><br>from <b>2022-09-06<\/b> to <b>2022-10-01<\/b>","inherit":true},"7af82ed25e3b.11":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-09-05 00:00:00.000000","2023-10-01 00:00:00.000000"],"y":9,"line":{"color":"#cccccc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Gradual drawdown \"just after labor day weekend\" \r<br />(estimated date)<\/b><br>from <b>2023-09-05<\/b> to <b>2023-10-01<\/b>","inherit":true},"7af82ed25e3b.12":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-03-17 00:00:00.000000","2022-04-02 00:00:00.000000"],"y":7,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>24/7 spill operation<\/b><br>from <b>2022-03-17<\/b> to <b>2022-04-02<\/b>","inherit":true},"7af82ed25e3b.13":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-04-02 00:00:00.000000","2022-04-15 00:00:00.000000"],"y":7,"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Nighttime spill using 3ft gate (daytime spill 50cfs \r<br />RO); no power gen<\/b><br>from <b>2022-04-02<\/b> to <b>2022-04-15<\/b>","inherit":true},"7af82ed25e3b.14":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-04-16 00:00:00.000000","2022-05-01 00:00:00.000000"],"y":7,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>24/7 spill operation<\/b><br>from <b>2022-04-16<\/b> to <b>2022-05-01<\/b>","inherit":true},"7af82ed25e3b.15":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-03-10 00:00:00.000000","2023-06-06 00:00:00.000000"],"y":7,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>24/7 spill operation; delay in start and extension of spill \r<br />operation was to support release of bulk-marked fish \r<br />that Cramer released into the reservoir in late May<\/b><br>from <b>2023-03-10<\/b> to <b>2023-06-06<\/b>","inherit":true},"7af82ed25e3b.16":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-08-05 00:00:00.000000","2023-11-02 00:00:00.000000"],"y":5,"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Drawdown<\/b><br>from <b>2023-08-05<\/b> to <b>2023-11-02<\/b>","inherit":true},"7af82ed25e3b.17":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-11-02 00:00:00.000000","2023-12-16 00:00:00.000000"],"y":5,"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Maintain at low pool<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-16<\/b>","inherit":true},"7af82ed25e3b.18":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-16 00:00:00.000000"],"y":3,"line":{"color":"#fca311","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Atmospheric river caused shift to flood risk management \r<br />(subject to operational constraints (prioritizing return \r<br />of FOS maximum authorized flood space; limiting \r<br />outflow to 10k cfs; limiting GPR outflow to 4500 \r<br />cfs maximum for RST))<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-16<\/b>","inherit":true},"7af82ed25e3b.19":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-16 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":1,"line":{"color":"#cccccc","width":23.076923076923077},"showlegend":false,"hoverinfo":"text","text":"<b>Refill reservoir to minimum conservation<\/b><br>from <b>2023-12-16<\/b> to <b>2023-12-31<\/b>","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","plot_bgcolor":"#FCFCFC","shapes":[{"type":"line","x0":0,"x1":1,"xref":"paper","y0":2,"y1":2,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":4,"y1":4,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":6,"y1":6,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":8,"y1":8,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":10,"y1":10,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":12,"y1":12,"line":{"color":"grey65","width":0.5}}],"xaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"showgrid":true,"gridcolor":"grey90","title":""},"yaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"range":[0,14],"showgrid":false,"title":"","tickmode":"array","tickvals":[13,11,9,7,5,3,1],"ticktext":["FOS: 13a","FOS: 13b","FOS: Reported regular ops.","GPR: 12a","GPR: 12b","GPR: Flood risk mgt.","GPR: Reported regular ops."]},"showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-10-01 00:00:00.000000","2021-12-15 00:00:00.000000"],"y":[13,13],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Utilize spillway for improved passage<\/b><br>from <b>2021-10-01<\/b> to <b>2021-12-15<\/b>","<b>Utilize spillway for improved passage<\/b><br>from <b>2021-10-01<\/b> to <b>2021-12-15<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-10-01 00:00:00.000000","2022-12-15 00:00:00.000000"],"y":[13,13],"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Nighttime spill and daytime generation<\/b><br>from <b>2022-10-01<\/b> to <b>2022-12-15<\/b>","<b>Nighttime spill and daytime generation<\/b><br>from <b>2022-10-01<\/b> to <b>2022-12-15<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-10-01 00:00:00.000000","2023-12-15 00:00:00.000000"],"y":[13,13],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Nighttime spill and daytime generation<\/b><br>from <b>2023-10-01<\/b> to <b>2023-12-15<\/b>","<b>Nighttime spill and daytime generation<\/b><br>from <b>2023-10-01<\/b> to <b>2023-12-15<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-02-01 00:00:00.000000","2022-05-15 00:00:00.000000"],"y":[11,11],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Delay refill and nighttime spill prioritization<\/b><br>from <b>2022-02-01<\/b> to <b>2022-05-15<\/b>","<b>Delay refill and nighttime spill prioritization<\/b><br>from <b>2022-02-01<\/b> to <b>2022-05-15<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-05-16 00:00:00.000000","2022-06-15 00:00:00.000000"],"y":[11,11],"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Reservoir refill but continue nighttime spill \r<br />prioritization<\/b><br>from <b>2022-05-16<\/b> to <b>2022-06-15<\/b>","<b>Reservoir refill but continue nighttime spill \r<br />prioritization<\/b><br>from <b>2022-05-16<\/b> to <b>2022-06-15<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-06-16 00:00:00.000000","2022-08-01 00:00:00.000000"],"y":[11,11],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Summer fish weir operation<\/b><br>from <b>2022-06-16<\/b> to <b>2022-08-01<\/b>","<b>Summer fish weir operation<\/b><br>from <b>2022-06-16<\/b> to <b>2022-08-01<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-01-01 00:00:00.000000","2023-05-15 00:00:00.000000"],"y":[11,11],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Delayed refill and downstream FP<\/b><br>from <b>2023-01-01<\/b> to <b>2023-05-15<\/b>","<b>Delayed refill and downstream FP<\/b><br>from <b>2023-01-01<\/b> to <b>2023-05-15<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-05-15 00:00:00.000000","2023-06-15 00:00:00.000000"],"y":[11,11],"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Reservoir refill but continued nighttime spill \r<br />prioritization<\/b><br>from <b>2023-05-15<\/b> to <b>2023-06-15<\/b>","<b>Reservoir refill but continued nighttime spill \r<br />prioritization<\/b><br>from <b>2023-05-15<\/b> to <b>2023-06-15<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-06-16 00:00:00.000000","2023-08-01 00:00:00.000000"],"y":[11,11],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Summer fish weir operation<\/b><br>from <b>2023-06-16<\/b> to <b>2023-08-01<\/b>","<b>Summer fish weir operation<\/b><br>from <b>2023-06-16<\/b> to <b>2023-08-01<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-09-06 00:00:00.000000","2022-10-01 00:00:00.000000"],"y":[9,9],"line":{"color":"#cccccc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Gradual drawdown \"just after labor day weekend\" \r<br />(estimated date)<\/b><br>from <b>2022-09-06<\/b> to <b>2022-10-01<\/b>","<b>Gradual drawdown \"just after labor day weekend\" \r<br />(estimated date)<\/b><br>from <b>2022-09-06<\/b> to <b>2022-10-01<\/b>"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-09-05 00:00:00.000000","2023-10-01 00:00:00.000000"],"y":[9,9],"line":{"color":"#cccccc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Gradual drawdown \"just after labor day weekend\" \r<br />(estimated date)<\/b><br>from <b>2023-09-05<\/b> to <b>2023-10-01<\/b>","<b>Gradual drawdown \"just after labor day weekend\" \r<br />(estimated date)<\/b><br>from <b>2023-09-05<\/b> to <b>2023-10-01<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-03-17 00:00:00.000000","2022-04-02 00:00:00.000000"],"y":[7,7],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>24/7 spill operation<\/b><br>from <b>2022-03-17<\/b> to <b>2022-04-02<\/b>","<b>24/7 spill operation<\/b><br>from <b>2022-03-17<\/b> to <b>2022-04-02<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-04-02 00:00:00.000000","2022-04-15 00:00:00.000000"],"y":[7,7],"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Nighttime spill using 3ft gate (daytime spill 50cfs \r<br />RO); no power gen<\/b><br>from <b>2022-04-02<\/b> to <b>2022-04-15<\/b>","<b>Nighttime spill using 3ft gate (daytime spill 50cfs \r<br />RO); no power gen<\/b><br>from <b>2022-04-02<\/b> to <b>2022-04-15<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-04-16 00:00:00.000000","2022-05-01 00:00:00.000000"],"y":[7,7],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>24/7 spill operation<\/b><br>from <b>2022-04-16<\/b> to <b>2022-05-01<\/b>","<b>24/7 spill operation<\/b><br>from <b>2022-04-16<\/b> to <b>2022-05-01<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-03-10 00:00:00.000000","2023-06-06 00:00:00.000000"],"y":[7,7],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>24/7 spill operation; delay in start and extension of spill \r<br />operation was to support release of bulk-marked fish \r<br />that Cramer released into the reservoir in late May<\/b><br>from <b>2023-03-10<\/b> to <b>2023-06-06<\/b>","<b>24/7 spill operation; delay in start and extension of spill \r<br />operation was to support release of bulk-marked fish \r<br />that Cramer released into the reservoir in late May<\/b><br>from <b>2023-03-10<\/b> to <b>2023-06-06<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-08-05 00:00:00.000000","2023-11-02 00:00:00.000000"],"y":[5,5],"line":{"color":"#219ebc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Drawdown<\/b><br>from <b>2023-08-05<\/b> to <b>2023-11-02<\/b>","<b>Drawdown<\/b><br>from <b>2023-08-05<\/b> to <b>2023-11-02<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-11-02 00:00:00.000000","2023-12-16 00:00:00.000000"],"y":[5,5],"line":{"color":"#0a647a","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Maintain at low pool<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-16<\/b>","<b>Maintain at low pool<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-16<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-16 00:00:00.000000"],"y":[3,3],"line":{"color":"#fca311","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Atmospheric river caused shift to flood risk management \r<br />(subject to operational constraints (prioritizing return \r<br />of FOS maximum authorized flood space; limiting \r<br />outflow to 10k cfs; limiting GPR outflow to 4500 \r<br />cfs maximum for RST))<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-16<\/b>","<b>Atmospheric river caused shift to flood risk management \r<br />(subject to operational constraints (prioritizing return \r<br />of FOS maximum authorized flood space; limiting \r<br />outflow to 10k cfs; limiting GPR outflow to 4500 \r<br />cfs maximum for RST))<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-16<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-16 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":[1,1],"line":{"color":"#cccccc","width":23.076923076923077},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Refill reservoir to minimum conservation<\/b><br>from <b>2023-12-16<\/b> to <b>2023-12-31<\/b>","<b>Refill reservoir to minimum conservation<\/b><br>from <b>2023-12-16<\/b> to <b>2023-12-31<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<details>
+<summary>
+<span style="font-size:120%">View the timeline in tabular format (click
+to expand)</span>
+</summary>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="2%" />
+<col width="3%" />
+<col width="3%" />
+<col width="81%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Measure</th>
+<th align="left">Project</th>
+<th align="left">Start</th>
+<th align="left">End</th>
+<th align="left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">13a</td>
+<td align="left">FOS</td>
+<td align="left">2021-10-01</td>
+<td align="left">2021-12-15</td>
+<td align="left">Utilize spillway for improved passage</td>
+</tr>
+<tr class="even">
+<td align="left">13a</td>
+<td align="left">FOS</td>
+<td align="left">2022-10-01</td>
+<td align="left">2022-12-15</td>
+<td align="left">Nighttime spill and daytime generation</td>
+</tr>
+<tr class="odd">
+<td align="left">13a</td>
+<td align="left">FOS</td>
+<td align="left">2023-10-01</td>
+<td align="left">2023-12-15</td>
+<td align="left">Nighttime spill and daytime generation</td>
+</tr>
+<tr class="even">
+<td align="left">13b</td>
+<td align="left">FOS</td>
+<td align="left">2022-02-01</td>
+<td align="left">2022-05-15</td>
+<td align="left">Delay refill and nighttime spill prioritization</td>
+</tr>
+<tr class="odd">
+<td align="left">13b</td>
+<td align="left">FOS</td>
+<td align="left">2022-05-16</td>
+<td align="left">2022-06-15</td>
+<td align="left">Reservoir refill but continue nighttime spill
+prioritization</td>
+</tr>
+<tr class="even">
+<td align="left">13b</td>
+<td align="left">FOS</td>
+<td align="left">2022-06-16</td>
+<td align="left">2022-08-01</td>
+<td align="left">Summer fish weir operation</td>
+</tr>
+<tr class="odd">
+<td align="left">13b</td>
+<td align="left">FOS</td>
+<td align="left">2023-01-01</td>
+<td align="left">2023-05-15</td>
+<td align="left">Delayed refill and downstream FP</td>
+</tr>
+<tr class="even">
+<td align="left">13b</td>
+<td align="left">FOS</td>
+<td align="left">2023-05-15</td>
+<td align="left">2023-06-15</td>
+<td align="left">Reservoir refill but continued nighttime spill
+prioritization</td>
+</tr>
+<tr class="odd">
+<td align="left">13b</td>
+<td align="left">FOS</td>
+<td align="left">2023-06-16</td>
+<td align="left">2023-08-01</td>
+<td align="left">Summer fish weir operation</td>
+</tr>
+<tr class="even">
+<td align="left">Reported regular ops.</td>
+<td align="left">FOS</td>
+<td align="left">2022-09-06</td>
+<td align="left">2022-10-01</td>
+<td align="left">Gradual drawdown “just after labor day weekend”
+(estimated date)</td>
+</tr>
+<tr class="odd">
+<td align="left">Reported regular ops.</td>
+<td align="left">FOS</td>
+<td align="left">2023-09-05</td>
+<td align="left">2023-10-01</td>
+<td align="left">Gradual drawdown “just after labor day weekend”
+(estimated date)</td>
+</tr>
+<tr class="even">
+<td align="left">12a</td>
+<td align="left">GPR</td>
+<td align="left">2022-03-17</td>
+<td align="left">2022-04-02</td>
+<td align="left">24/7 spill operation</td>
+</tr>
+<tr class="odd">
+<td align="left">12a</td>
+<td align="left">GPR</td>
+<td align="left">2022-04-02</td>
+<td align="left">2022-04-15</td>
+<td align="left">Nighttime spill using 3ft gate (daytime spill 50cfs
+RO); no power gen</td>
+</tr>
+<tr class="even">
+<td align="left">12a</td>
+<td align="left">GPR</td>
+<td align="left">2022-04-16</td>
+<td align="left">2022-05-01</td>
+<td align="left">24/7 spill operation</td>
+</tr>
+<tr class="odd">
+<td align="left">12a</td>
+<td align="left">GPR</td>
+<td align="left">2023-03-10</td>
+<td align="left">2023-06-06</td>
+<td align="left">24/7 spill operation; delay in start and extension of
+spill operation was to support release of bulk-marked fish that Cramer
+released into the reservoir in late May</td>
+</tr>
+<tr class="even">
+<td align="left">12b</td>
+<td align="left">GPR</td>
+<td align="left">2023-08-05</td>
+<td align="left">2023-11-02</td>
+<td align="left">Drawdown</td>
+</tr>
+<tr class="odd">
+<td align="left">12b</td>
+<td align="left">GPR</td>
+<td align="left">2023-11-02</td>
+<td align="left">2023-12-16</td>
+<td align="left">Maintain at low pool</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">GPR</td>
+<td align="left">2023-12-03</td>
+<td align="left">2023-12-16</td>
+<td align="left">Atmospheric river caused shift to flood risk management
+(subject to operational constraints (prioritizing return of FOS maximum
+authorized flood space; limiting outflow to 10k cfs; limiting GPR
+outflow to 4500 cfs maximum for RST))</td>
+</tr>
+<tr class="odd">
+<td align="left">Reported regular ops.</td>
+<td align="left">GPR</td>
+<td align="left">2023-12-16</td>
+<td align="left">2023-12-31</td>
+<td align="left">Refill reservoir to minimum conservation</td>
+</tr>
+</tbody>
+</table>
+</details>
+<br>
+<details>
+<summary>
+<span style="font-size:120%">View summary descriptions of the injunction
+measures in the South Santiam (click to expand)</span>
+</summary>
+<p><span style="font-size:120%"><br>Foster</span></p>
+<ul>
+<li><strong>13a</strong>: Draw down Foster Reservoir to elevation
+620-625 feet by October 1 and operate the Foster Dam spillway, with
+limited turbine operation, from one hour before sunset to one-half hour
+after sunrise from October 1 through December 15.</li>
+<li><strong>13b</strong>: Hold Foster Reservoir at minimum conservation
+pool (elevation 613 feet) and operate the Foster Dam spillway, with
+limited turbine operation, from one hour before sunset to one-half hour
+after sunrise from February 1 through May 15. Beginning May 16, refill
+Foster Reservoir, targeting full pool by Memorial Day Weekend, and
+operate the Foster Dam spillway, with limited turbine operation, from
+one hour before sunset to one-half hour after sunrise until June 15.
+Beginning June 16 through mid- to late-July, operate the Foster fish
+weir for downstream water temperature management.</li>
+</ul>
+<p><span style="font-size:120%">Green Peter</span></p>
+<ul>
+<li><strong>12a</strong>: Beginning in spring 2022, once Green Peter
+Reservoir reaches elevation 971 ft., spill continuously (24/7) until May
+1 or for at least 30 days, whichever is longer. The implementation in
+2023 was influenced by poor health of surrogate fish to be released
+during paired releases. This caused the Corps and NMFS to decide to
+continue operating 24/7 spill operations in 2023 versus testing
+continuous spill versus nighttime-only spill (as was planned with
+surrogate fish).</li>
+<li><strong>12b</strong>: Conduct a fall drawdown of Green Peter
+Reservoir to a target elevation of 780 ft. by November 15 and hold at
+that elevation until December 15. Generally use the regulating outlets
+exclusively to pass flow once the reservoir is below minimum power pool
+(887 ft.).</li>
+<li><strong>11</strong>: Outplanting above Green Peter (not shown in the
+graphic above, occurred in Summer 2022 and 2023).</li>
+</ul>
+</details>
+<p><br> For full details, see implementation plans on the <a
+href="https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/">Willamette
+Injunction website</a>.</p>
+<hr>
+</div>
+<div id="south-fork-mckenzie" class="section level2">
+<h2>South-fork McKenzie</h2>
+<ul>
+<li><strong>CGR:</strong> Cougar dam</li>
+</ul>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-63ef28a75f160dbeae9d" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-63ef28a75f160dbeae9d">{"x":{"visdat":{"7af83387788c":["function () ","plotlyVisDat"]},"cur_data":"7af83387788c","attrs":{"7af83387788c":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"7af83387788c.1":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-11-03 00:00:00.000000","2021-12-22 00:00:00.000000"],"y":11,"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>Some station service was required to ensure no loss \r<br />of FRM capability; in mid-Nov, reservoir elevation \r<br />refilled due to storm and refilled to 1515 feet \r<br />(from target of 1505 ft)<\/b><br>from <b>2021-11-03<\/b> to <b>2021-12-22<\/b>","inherit":true},"7af83387788c.2":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-10-04 00:00:00.000000","2022-12-21 00:00:00.000000"],"y":11,"line":{"color":"#0a647a","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>The large snowpack combined with late and un-\r<br />seasonably heavy rains observed in the spring \r<br />of 2022 resulted in quite a successful spring \r<br />passage operation that allowed for an extended \r<br />delayed refill<\/b><br>from <b>2022-10-04<\/b> to <b>2022-12-21<\/b>","inherit":true},"7af83387788c.3":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-11-02 00:00:00.000000","2023-12-03 00:00:00.000000"],"y":11,"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>NA<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-03<\/b>","inherit":true},"7af83387788c.4":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-02-01 00:00:00.000000","2022-05-27 00:00:00.000000"],"y":9,"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>NA<\/b><br>from <b>2022-02-01<\/b> to <b>2022-05-27<\/b>","inherit":true},"7af83387788c.5":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-02-01 00:00:00.000000","2023-03-15 00:00:00.000000"],"y":9,"line":{"color":"#0a647a","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>NA<\/b><br>from <b>2023-02-01<\/b> to <b>2023-03-15<\/b>","inherit":true},"7af83387788c.6":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-03-30 00:00:00.000000","2023-05-25 00:00:00.000000"],"y":9,"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>During Mid-Apr there were difficulties holding \r<br />reservoir low (one turbine was out); WTCT opened \r<br />to provide additional surface downstream passage<\/b><br>from <b>2023-03-30<\/b> to <b>2023-05-25<\/b>","inherit":true},"7af83387788c.7":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-03-15 00:00:00.000000","2023-03-30 00:00:00.000000"],"y":7,"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>Further drawdown to 1520 ft<\/b><br>from <b>2023-03-15<\/b> to <b>2023-03-30<\/b>","inherit":true},"7af83387788c.8":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-03 00:00:00.000000","2024-03-01 00:00:00.000000"],"y":5,"line":{"color":"#fca311","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>NA<\/b><br>from <b>2023-12-03<\/b> to <b>2024-03-01<\/b>","inherit":true},"7af83387788c.9":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-12-22 00:00:00.000000","2022-02-01 00:00:00.000000"],"y":3,"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>Nighttime RO; daytime generation<\/b><br>from <b>2021-12-22<\/b> to <b>2022-02-01<\/b>","inherit":true},"7af83387788c.10":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-02-01 00:00:00.000000","2022-03-14 00:00:00.000000"],"y":1,"line":{"color":"#cccccc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>Drawdown<\/b><br>from <b>2022-02-01<\/b> to <b>2022-03-14<\/b>","inherit":true},"7af83387788c.11":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-05-27 00:00:00.000000","2022-10-04 00:00:00.000000"],"y":1,"line":{"color":"#cccccc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>Reservoir refill for temperature controls; limited \r<br />outflow except through the ROs<\/b><br>from <b>2022-05-27<\/b> to <b>2022-10-04<\/b>","inherit":true},"7af83387788c.12":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-05-25 00:00:00.000000","2023-10-20 00:00:00.000000"],"y":1,"line":{"color":"#cccccc","width":27.272727272727273},"showlegend":false,"hoverinfo":"text","text":"<b>WCTC used for downstream temperature \r<br />management and additional surface passage \r<br />(in spring); stopped when elevation too low \r<br />to operate WCTC<\/b><br>from <b>2023-05-25<\/b> to <b>2023-10-20<\/b>","inherit":true},"7af83387788c.13":{"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-05-01 00:00:00.000000","2022-05-15 00:00:00.000000"],"y":[5,5],"marker":{"color":["#fca311","#fca311"],"size":19.09090909090909,"symbol":"circle","line":{"color":"black","width":1}},"showlegend":false,"hoverinfo":"text","text":["<b>High flow event: 2022-05-01<\/b>","<b>High flow event: 2022-05-15<\/b>"],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","plot_bgcolor":"#FCFCFC","shapes":[{"type":"line","x0":0,"x1":1,"xref":"paper","y0":2,"y1":2,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":4,"y1":4,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":6,"y1":6,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":8,"y1":8,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":10,"y1":10,"line":{"color":"grey65","width":0.5}}],"xaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"showgrid":true,"gridcolor":"grey90","title":""},"yaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"range":[0,12],"showgrid":false,"title":"","tickmode":"array","tickvals":[11,9,7,5,3,1],"ticktext":["CGR: 14","CGR: 15a","CGR: Drawdown","CGR: Flood risk mgt.","CGR: Night: RO/day: power gen.","CGR: Reported regular ops."]},"showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-11-03 00:00:00.000000","2021-12-22 00:00:00.000000"],"y":[11,11],"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Some station service was required to ensure no loss \r<br />of FRM capability; in mid-Nov, reservoir elevation \r<br />refilled due to storm and refilled to 1515 feet \r<br />(from target of 1505 ft)<\/b><br>from <b>2021-11-03<\/b> to <b>2021-12-22<\/b>","<b>Some station service was required to ensure no loss \r<br />of FRM capability; in mid-Nov, reservoir elevation \r<br />refilled due to storm and refilled to 1515 feet \r<br />(from target of 1505 ft)<\/b><br>from <b>2021-11-03<\/b> to <b>2021-12-22<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-10-04 00:00:00.000000","2022-12-21 00:00:00.000000"],"y":[11,11],"line":{"color":"#0a647a","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>The large snowpack combined with late and un-\r<br />seasonably heavy rains observed in the spring \r<br />of 2022 resulted in quite a successful spring \r<br />passage operation that allowed for an extended \r<br />delayed refill<\/b><br>from <b>2022-10-04<\/b> to <b>2022-12-21<\/b>","<b>The large snowpack combined with late and un-\r<br />seasonably heavy rains observed in the spring \r<br />of 2022 resulted in quite a successful spring \r<br />passage operation that allowed for an extended \r<br />delayed refill<\/b><br>from <b>2022-10-04<\/b> to <b>2022-12-21<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-11-02 00:00:00.000000","2023-12-03 00:00:00.000000"],"y":[11,11],"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>NA<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-03<\/b>","<b>NA<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-03<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-02-01 00:00:00.000000","2022-05-27 00:00:00.000000"],"y":[9,9],"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>NA<\/b><br>from <b>2022-02-01<\/b> to <b>2022-05-27<\/b>","<b>NA<\/b><br>from <b>2022-02-01<\/b> to <b>2022-05-27<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-02-01 00:00:00.000000","2023-03-15 00:00:00.000000"],"y":[9,9],"line":{"color":"#0a647a","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>NA<\/b><br>from <b>2023-02-01<\/b> to <b>2023-03-15<\/b>","<b>NA<\/b><br>from <b>2023-02-01<\/b> to <b>2023-03-15<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-03-30 00:00:00.000000","2023-05-25 00:00:00.000000"],"y":[9,9],"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>During Mid-Apr there were difficulties holding \r<br />reservoir low (one turbine was out); WTCT opened \r<br />to provide additional surface downstream passage<\/b><br>from <b>2023-03-30<\/b> to <b>2023-05-25<\/b>","<b>During Mid-Apr there were difficulties holding \r<br />reservoir low (one turbine was out); WTCT opened \r<br />to provide additional surface downstream passage<\/b><br>from <b>2023-03-30<\/b> to <b>2023-05-25<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-03-15 00:00:00.000000","2023-03-30 00:00:00.000000"],"y":[7,7],"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Further drawdown to 1520 ft<\/b><br>from <b>2023-03-15<\/b> to <b>2023-03-30<\/b>","<b>Further drawdown to 1520 ft<\/b><br>from <b>2023-03-15<\/b> to <b>2023-03-30<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-03 00:00:00.000000","2024-03-01 00:00:00.000000"],"y":[5,5],"line":{"color":"#fca311","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>NA<\/b><br>from <b>2023-12-03<\/b> to <b>2024-03-01<\/b>","<b>NA<\/b><br>from <b>2023-12-03<\/b> to <b>2024-03-01<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-12-22 00:00:00.000000","2022-02-01 00:00:00.000000"],"y":[3,3],"line":{"color":"#219ebc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Nighttime RO; daytime generation<\/b><br>from <b>2021-12-22<\/b> to <b>2022-02-01<\/b>","<b>Nighttime RO; daytime generation<\/b><br>from <b>2021-12-22<\/b> to <b>2022-02-01<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-02-01 00:00:00.000000","2022-03-14 00:00:00.000000"],"y":[1,1],"line":{"color":"#cccccc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Drawdown<\/b><br>from <b>2022-02-01<\/b> to <b>2022-03-14<\/b>","<b>Drawdown<\/b><br>from <b>2022-02-01<\/b> to <b>2022-03-14<\/b>"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-05-27 00:00:00.000000","2022-10-04 00:00:00.000000"],"y":[1,1],"line":{"color":"#cccccc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Reservoir refill for temperature controls; limited \r<br />outflow except through the ROs<\/b><br>from <b>2022-05-27<\/b> to <b>2022-10-04<\/b>","<b>Reservoir refill for temperature controls; limited \r<br />outflow except through the ROs<\/b><br>from <b>2022-05-27<\/b> to <b>2022-10-04<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-05-25 00:00:00.000000","2023-10-20 00:00:00.000000"],"y":[1,1],"line":{"color":"#cccccc","width":27.272727272727273},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>WCTC used for downstream temperature \r<br />management and additional surface passage \r<br />(in spring); stopped when elevation too low \r<br />to operate WCTC<\/b><br>from <b>2023-05-25<\/b> to <b>2023-10-20<\/b>","<b>WCTC used for downstream temperature \r<br />management and additional surface passage \r<br />(in spring); stopped when elevation too low \r<br />to operate WCTC<\/b><br>from <b>2023-05-25<\/b> to <b>2023-10-20<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"markers","type":"scatter","x":["2022-05-01 00:00:00.000000","2022-05-15 00:00:00.000000"],"y":[5,5],"marker":{"color":["#fca311","#fca311"],"size":19.09090909090909,"symbol":"circle","line":{"color":"black","width":1}},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>High flow event: 2022-05-01<\/b>","<b>High flow event: 2022-05-15<\/b>"],"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"line":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<details>
+<summary>
+<span style="font-size:120%">View the timeline in tabular format (click
+to expand)</span>
+</summary>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="3%" />
+<col width="4%" />
+<col width="4%" />
+<col width="78%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Measure</th>
+<th align="left">Project</th>
+<th align="left">Start</th>
+<th align="left">End</th>
+<th align="left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">14</td>
+<td align="left">CGR</td>
+<td align="left">2021-11-03</td>
+<td align="left">2021-12-22</td>
+<td align="left">Some station service was required to ensure no loss of
+FRM capability; in mid-Nov, reservoir elevation refilled due to storm
+and refilled to 1515 feet (from target of 1505 ft)</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">CGR</td>
+<td align="left">2022-10-04</td>
+<td align="left">2022-12-21</td>
+<td align="left">The large snowpack combined with late and un-
+seasonably heavy rains observed in the spring of 2022 resulted in quite
+a successful spring passage operation that allowed for an extended
+delayed refill</td>
+</tr>
+<tr class="odd">
+<td align="left">14</td>
+<td align="left">CGR</td>
+<td align="left">2023-11-02</td>
+<td align="left">2023-12-03</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">15a</td>
+<td align="left">CGR</td>
+<td align="left">2022-02-01</td>
+<td align="left">2022-05-27</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">15a</td>
+<td align="left">CGR</td>
+<td align="left">2023-02-01</td>
+<td align="left">2023-03-15</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">15a</td>
+<td align="left">CGR</td>
+<td align="left">2023-03-30</td>
+<td align="left">2023-05-25</td>
+<td align="left">During Mid-Apr there were difficulties holding
+reservoir low (one turbine was out); WTCT opened to provide additional
+surface downstream passage</td>
+</tr>
+<tr class="odd">
+<td align="left">Drawdown</td>
+<td align="left">CGR</td>
+<td align="left">2023-03-15</td>
+<td align="left">2023-03-30</td>
+<td align="left">Further drawdown to 1520 ft</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">CGR</td>
+<td align="left">2022-05-01</td>
+<td align="left">2022-05-01</td>
+<td align="left">High flow event</td>
+</tr>
+<tr class="odd">
+<td align="left">Flood risk mgt.</td>
+<td align="left">CGR</td>
+<td align="left">2022-05-15</td>
+<td align="left">2022-05-15</td>
+<td align="left">High flow event</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">CGR</td>
+<td align="left">2023-12-03</td>
+<td align="left">2024-03-01</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Night: RO/day: power gen.</td>
+<td align="left">CGR</td>
+<td align="left">2021-12-22</td>
+<td align="left">2022-02-01</td>
+<td align="left">Nighttime RO; daytime generation</td>
+</tr>
+<tr class="even">
+<td align="left">Reported regular ops.</td>
+<td align="left">CGR</td>
+<td align="left">2022-02-01</td>
+<td align="left">2022-03-14</td>
+<td align="left">Drawdown</td>
+</tr>
+<tr class="odd">
+<td align="left">Reported regular ops.</td>
+<td align="left">CGR</td>
+<td align="left">2022-05-27</td>
+<td align="left">2022-10-04</td>
+<td align="left">Reservoir refill for temperature controls; limited
+outflow except through the ROs</td>
+</tr>
+<tr class="even">
+<td align="left">Reported regular ops.</td>
+<td align="left">CGR</td>
+<td align="left">2023-05-25</td>
+<td align="left">2023-10-20</td>
+<td align="left">WCTC used for downstream temperature management and
+additional surface passage (in spring); stopped when elevation too low
+to operate WCTC</td>
+</tr>
+</tbody>
+</table>
+</details>
+<br>
+<details>
+<summary>
+<span style="font-size:120%">View summary descriptions of the injunction
+measures in the South Fork McKenzie (click to expand)</span>
+</summary>
+<p><span style="font-size:120%"><br>Cougar</span></p>
+<ul>
+<li><strong>14</strong>: Conduct a fall drawdown of Cougar Reservoir to
+a target elevation of 1,505 feet by November 15 until December 15 and
+generally use the regulating outlets exclusively during that time to
+pass flow.</li>
+<li><strong>15a</strong>: On December 16, initiate the refill of Cougar
+Reservoir to minimum conservation pool (elevation 1,532 feet) and hold
+until March 1. On March 1, begin drafting Cougar Reservoir to reach
+elevation 1,520 feet by April 1. Using adaptive management to determine
+the refill starting date, delay the refill of Cougar Reservoir from
+elevation 1,520 feet as long as possible while maintaining a high
+likelihood of reaching elevation 1,571 feet by July 1 to enable use of
+the water temperature control tower in late summer and fall. From
+December 16 through June 1, prioritize the regulating outlets at night
+to pass flows. In September, transition to the fall drawdown
+operation.</li>
+</ul>
+</details>
+<p><br>For full details, see implementation plans on the <a
+href="https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/">Willamette
+Injunction website</a>.</p>
+<hr>
+</div>
+<div id="middle-fork" class="section level2">
+<h2>Middle Fork</h2>
+<ul>
+<li><strong>FCR</strong>: Fall Creek dam and reservoir</li>
+<li><strong>HCR</strong>: Hills Creek dam and reservoir</li>
+<li><strong>LOP</strong>: Lookout Point/Dexter dam and reservoir</li>
+</ul>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-ab7b966e4523a55923b4" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-ab7b966e4523a55923b4">{"x":{"visdat":{"7af859654b2c":["function () ","plotlyVisDat"]},"cur_data":"7af859654b2c","attrs":{"7af859654b2c":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"7af859654b2c.1":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2021-11-05 00:00:00.000000","2022-01-16 00:00:00.000000"],"y":21,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Deep drawdown (early due to RST showing \r<br />movement from the reservoir)<\/b><br>from <b>2021-11-05<\/b> to <b>2022-01-16<\/b>","inherit":true},"7af859654b2c.2":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-10-20 00:00:00.000000","2022-11-05 00:00:00.000000"],"y":21,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>First deep drawdown<\/b><br>from <b>2022-10-20<\/b> to <b>2022-11-05<\/b>","inherit":true},"7af859654b2c.3":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-12-01 00:00:00.000000","2022-12-29 00:00:00.000000"],"y":21,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Second deep drawdown<\/b><br>from <b>2022-12-01<\/b> to <b>2022-12-29<\/b>","inherit":true},"7af859654b2c.4":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-10-16 00:00:00.000000","2023-10-22 00:00:00.000000"],"y":21,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>End date estimated; First deep drawdown<\/b><br>from <b>2023-10-16<\/b> to <b>2023-10-22<\/b>","inherit":true},"7af859654b2c.5":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-01 00:00:00.000000","2024-01-09 00:00:00.000000"],"y":21,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Second \"injunction\" deep drawdown<\/b><br>from <b>2023-12-01<\/b> to <b>2024-01-09<\/b>","inherit":true},"7af859654b2c.6":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-01-16 00:00:00.000000","2022-04-15 00:00:00.000000"],"y":19,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Concluded to improve likelihood of reservoir \r<br />refilling sufficiently to operate the Fall Creek AFF<\/b><br>from <b>2022-01-16<\/b> to <b>2022-04-15<\/b>","inherit":true},"7af859654b2c.7":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-01-01 00:00:00.000000","2023-05-05 00:00:00.000000"],"y":19,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Delayed refill; adverse consequences as reservoir \r<br />did not fill enough<\/b><br>from <b>2023-01-01<\/b> to <b>2023-05-05<\/b>","inherit":true},"7af859654b2c.8":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-12-29 00:00:00.000000","2023-01-01 00:00:00.000000"],"y":17,"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Reservoir used to capture inflows during rain events<\/b><br>from <b>2022-12-29<\/b> to <b>2023-01-01<\/b>","inherit":true},"7af859654b2c.9":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-04-16 00:00:00.000000","2022-10-20 00:00:00.000000"],"y":15,"line":{"color":"#cccccc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Refill and operate AFF<\/b><br>from <b>2022-04-16<\/b> to <b>2022-10-20<\/b>","inherit":true},"7af859654b2c.10":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-05-05 00:00:00.000000","2023-10-16 00:00:00.000000"],"y":15,"line":{"color":"#cccccc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Refill and operate AFF<\/b><br>from <b>2023-05-05<\/b> to <b>2023-10-16<\/b>","inherit":true},"7af859654b2c.11":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-01-01 00:00:00.000000","2022-03-01 00:00:00.000000"],"y":13,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Prioritize ROs at night (daytime generation) when \r<br />elevation below 1460 ft.<\/b><br>from <b>2022-01-01<\/b> to <b>2022-03-01<\/b>","inherit":true},"7af859654b2c.12":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-11-18 00:00:00.000000","2022-12-29 00:00:00.000000"],"y":13,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Elevation below 1460 ft., turbines used during day \r<br />and RO prioritization at night<\/b><br>from <b>2022-11-18<\/b> to <b>2022-12-29<\/b>","inherit":true},"7af859654b2c.13":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-01-01 00:00:00.000000","2023-04-12 00:00:00.000000"],"y":13,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Elevation below 1460 ft., turbines used during day \r<br />and RO prioritization at night<\/b><br>from <b>2023-01-01<\/b> to <b>2023-04-12<\/b>","inherit":true},"7af859654b2c.14":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-11-27 00:00:00.000000","2023-12-03 00:00:00.000000"],"y":13,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Estimated start date; elevation below 1460 ft.<\/b><br>from <b>2023-11-27<\/b> to <b>2023-12-03<\/b>","inherit":true},"7af859654b2c.15":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-21 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":13,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Prioritize ROs at night (daytime generation) when \r<br />elevation below 1460 ft.<\/b><br>from <b>2023-12-21<\/b> to <b>2023-12-31<\/b>","inherit":true},"7af859654b2c.16":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-07-14 00:00:00.000000","2022-11-18 00:00:00.000000"],"y":11,"line":{"color":"#cccccc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Due to repair work on turbines, RO operation begins \r<br />early<\/b><br>from <b>2022-07-14<\/b> to <b>2022-11-18<\/b>","inherit":true},"7af859654b2c.17":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-12-29 00:00:00.000000","2023-01-01 00:00:00.000000"],"y":9,"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>All flow to powerhouse due to Dec storm<\/b><br>from <b>2022-12-29<\/b> to <b>2023-01-01<\/b>","inherit":true},"7af859654b2c.18":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-20 00:00:00.000000"],"y":9,"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Flooding pushed above El 1460 ft.<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-20<\/b>","inherit":true},"7af859654b2c.19":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-06-01 00:00:00.000000","2023-07-13 00:00:00.000000"],"y":7,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Prepare for measure 16 (deep drawdown); ROs \r<br />opened<\/b><br>from <b>2023-06-01<\/b> to <b>2023-07-13<\/b>","inherit":true},"7af859654b2c.20":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-11-02 00:00:00.000000","2023-12-16 00:00:00.000000"],"y":7,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Drawdown passage operations<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-16<\/b>","inherit":true},"7af859654b2c.21":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-04-22 00:00:00.000000","2022-05-23 00:00:00.000000"],"y":5,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Ungated continuous surface spill operation (exception \r<br />May 6-9 when turbines were used to pass high flows \r<br />caused by rain)<\/b><br>from <b>2022-04-22<\/b> to <b>2022-05-23<\/b>","inherit":true},"7af859654b2c.22":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-05-23 00:00:00.000000","2022-06-10 00:00:00.000000"],"y":5,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Spill gates replaced; nighttime spill operations<\/b><br>from <b>2022-05-23<\/b> to <b>2022-06-10<\/b>","inherit":true},"7af859654b2c.23":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-06-14 00:00:00.000000","2022-07-20 00:00:00.000000"],"y":5,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Nighttime spill operations concluded early due to \r<br />downstream temperatures<\/b><br>from <b>2022-06-14<\/b> to <b>2022-07-20<\/b>","inherit":true},"7af859654b2c.24":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-07-20 00:00:00.000000","2022-08-27 00:00:00.000000"],"y":5,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Turbine use for temperature management<\/b><br>from <b>2022-07-20<\/b> to <b>2022-08-27<\/b>","inherit":true},"7af859654b2c.25":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-08-27 00:00:00.000000","2022-10-07 00:00:00.000000"],"y":5,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Concluded when LOP became isothermal<\/b><br>from <b>2022-08-27<\/b> to <b>2022-10-07<\/b>","inherit":true},"7af859654b2c.26":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-04-15 00:00:00.000000","2023-05-19 00:00:00.000000"],"y":5,"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Ungated continuous surface spill operation<\/b><br>from <b>2023-04-15<\/b> to <b>2023-05-19<\/b>","inherit":true},"7af859654b2c.27":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-05-19 00:00:00.000000","2023-06-01 00:00:00.000000"],"y":5,"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Spill gates replaced; nighttime spill operations<\/b><br>from <b>2023-05-19<\/b> to <b>2023-06-01<\/b>","inherit":true},"7af859654b2c.28":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-12-01 00:00:00.000000","2022-12-15 00:00:00.000000"],"y":3,"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Unplanned PH outage<\/b><br>from <b>2022-12-01<\/b> to <b>2022-12-15<\/b>","inherit":true},"7af859654b2c.29":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-05-06 00:00:00.000000","2022-05-09 00:00:00.000000"],"y":1,"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Turbines used to pass high flows caused by high \r<br />rain event<\/b><br>from <b>2022-05-06<\/b> to <b>2022-05-09<\/b>","inherit":true},"7af859654b2c.30":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-06-10 00:00:00.000000","2022-06-14 00:00:00.000000"],"y":1,"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Turbines used to pass high inflows for four days \r<br />continuously<\/b><br>from <b>2022-06-10<\/b> to <b>2022-06-14<\/b>","inherit":true},"7af859654b2c.31":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":1,"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":"text","text":"<b>Refilling of reservoir with high inflows (ending measure \r<br />16)<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-31<\/b>","inherit":true},"7af859654b2c.32":{"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","x":["2022-03-15 00:00:00.000000","2023-01-18 00:00:00.000000","2023-03-13 00:00:00.000000","2023-07-13 00:00:00.000000","2023-09-09 00:00:00.000000"],"y":[15,15,15,3,3],"marker":{"color":["black","black","black","black","black"],"size":10,"symbol":"circle","line":{"color":"black","width":1}},"showlegend":false,"hoverinfo":"text","text":["<b>Refill to minimum conservation pool: 2022-03-15<\/b>","<b>Refill to 700 ft; otherwise delayed refill: 2023-01-18<\/b>","<b>Refill to 720 ft; otherwise delayed refill: 2023-03-13<\/b>","<b>ROs opened to cool downstream water temperatures: 2023-07-13<\/b>","<b>Turbines turned off (elevation below power pool): 2023-09-09<\/b>"],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","plot_bgcolor":"#FCFCFC","shapes":[{"type":"line","x0":0,"x1":1,"xref":"paper","y0":2,"y1":2,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":4,"y1":4,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":6,"y1":6,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":8,"y1":8,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":10,"y1":10,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":12,"y1":12,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":14,"y1":14,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":16,"y1":16,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":18,"y1":18,"line":{"color":"grey65","width":0.5}},{"type":"line","x0":0,"x1":1,"xref":"paper","y0":20,"y1":20,"line":{"color":"grey65","width":0.5}}],"xaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"showgrid":true,"gridcolor":"grey90","title":""},"yaxis":{"domain":[0,1],"automargin":true,"linewidth":1,"mirror":true,"range":[0,22],"showgrid":false,"title":"","tickmode":"array","tickvals":[21,19,17,15,13,11,9,7,5,3,1],"ticktext":["FCR: 19","FCR: 20","FCR: Flood risk mgt.","FCR: Reported regular ops.","HCR: 8","HCR: Event","HCR: Flood risk mgt.","LOP: 16","LOP: 17","LOP: Event","LOP: Flood risk mgt."]},"showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2021-11-05 00:00:00.000000","2022-01-16 00:00:00.000000"],"y":[21,21],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Deep drawdown (early due to RST showing \r<br />movement from the reservoir)<\/b><br>from <b>2021-11-05<\/b> to <b>2022-01-16<\/b>","<b>Deep drawdown (early due to RST showing \r<br />movement from the reservoir)<\/b><br>from <b>2021-11-05<\/b> to <b>2022-01-16<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-10-20 00:00:00.000000","2022-11-05 00:00:00.000000"],"y":[21,21],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>First deep drawdown<\/b><br>from <b>2022-10-20<\/b> to <b>2022-11-05<\/b>","<b>First deep drawdown<\/b><br>from <b>2022-10-20<\/b> to <b>2022-11-05<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-12-01 00:00:00.000000","2022-12-29 00:00:00.000000"],"y":[21,21],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Second deep drawdown<\/b><br>from <b>2022-12-01<\/b> to <b>2022-12-29<\/b>","<b>Second deep drawdown<\/b><br>from <b>2022-12-01<\/b> to <b>2022-12-29<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-10-16 00:00:00.000000","2023-10-22 00:00:00.000000"],"y":[21,21],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>End date estimated; First deep drawdown<\/b><br>from <b>2023-10-16<\/b> to <b>2023-10-22<\/b>","<b>End date estimated; First deep drawdown<\/b><br>from <b>2023-10-16<\/b> to <b>2023-10-22<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-01 00:00:00.000000","2024-01-09 00:00:00.000000"],"y":[21,21],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Second \"injunction\" deep drawdown<\/b><br>from <b>2023-12-01<\/b> to <b>2024-01-09<\/b>","<b>Second \"injunction\" deep drawdown<\/b><br>from <b>2023-12-01<\/b> to <b>2024-01-09<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-01-16 00:00:00.000000","2022-04-15 00:00:00.000000"],"y":[19,19],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Concluded to improve likelihood of reservoir \r<br />refilling sufficiently to operate the Fall Creek AFF<\/b><br>from <b>2022-01-16<\/b> to <b>2022-04-15<\/b>","<b>Concluded to improve likelihood of reservoir \r<br />refilling sufficiently to operate the Fall Creek AFF<\/b><br>from <b>2022-01-16<\/b> to <b>2022-04-15<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-01-01 00:00:00.000000","2023-05-05 00:00:00.000000"],"y":[19,19],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Delayed refill; adverse consequences as reservoir \r<br />did not fill enough<\/b><br>from <b>2023-01-01<\/b> to <b>2023-05-05<\/b>","<b>Delayed refill; adverse consequences as reservoir \r<br />did not fill enough<\/b><br>from <b>2023-01-01<\/b> to <b>2023-05-05<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-12-29 00:00:00.000000","2023-01-01 00:00:00.000000"],"y":[17,17],"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Reservoir used to capture inflows during rain events<\/b><br>from <b>2022-12-29<\/b> to <b>2023-01-01<\/b>","<b>Reservoir used to capture inflows during rain events<\/b><br>from <b>2022-12-29<\/b> to <b>2023-01-01<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-04-16 00:00:00.000000","2022-10-20 00:00:00.000000"],"y":[15,15],"line":{"color":"#cccccc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Refill and operate AFF<\/b><br>from <b>2022-04-16<\/b> to <b>2022-10-20<\/b>","<b>Refill and operate AFF<\/b><br>from <b>2022-04-16<\/b> to <b>2022-10-20<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-05-05 00:00:00.000000","2023-10-16 00:00:00.000000"],"y":[15,15],"line":{"color":"#cccccc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Refill and operate AFF<\/b><br>from <b>2023-05-05<\/b> to <b>2023-10-16<\/b>","<b>Refill and operate AFF<\/b><br>from <b>2023-05-05<\/b> to <b>2023-10-16<\/b>"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-01-01 00:00:00.000000","2022-03-01 00:00:00.000000"],"y":[13,13],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Prioritize ROs at night (daytime generation) when \r<br />elevation below 1460 ft.<\/b><br>from <b>2022-01-01<\/b> to <b>2022-03-01<\/b>","<b>Prioritize ROs at night (daytime generation) when \r<br />elevation below 1460 ft.<\/b><br>from <b>2022-01-01<\/b> to <b>2022-03-01<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-11-18 00:00:00.000000","2022-12-29 00:00:00.000000"],"y":[13,13],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Elevation below 1460 ft., turbines used during day \r<br />and RO prioritization at night<\/b><br>from <b>2022-11-18<\/b> to <b>2022-12-29<\/b>","<b>Elevation below 1460 ft., turbines used during day \r<br />and RO prioritization at night<\/b><br>from <b>2022-11-18<\/b> to <b>2022-12-29<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-01-01 00:00:00.000000","2023-04-12 00:00:00.000000"],"y":[13,13],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Elevation below 1460 ft., turbines used during day \r<br />and RO prioritization at night<\/b><br>from <b>2023-01-01<\/b> to <b>2023-04-12<\/b>","<b>Elevation below 1460 ft., turbines used during day \r<br />and RO prioritization at night<\/b><br>from <b>2023-01-01<\/b> to <b>2023-04-12<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-11-27 00:00:00.000000","2023-12-03 00:00:00.000000"],"y":[13,13],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Estimated start date; elevation below 1460 ft.<\/b><br>from <b>2023-11-27<\/b> to <b>2023-12-03<\/b>","<b>Estimated start date; elevation below 1460 ft.<\/b><br>from <b>2023-11-27<\/b> to <b>2023-12-03<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-21 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":[13,13],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Prioritize ROs at night (daytime generation) when \r<br />elevation below 1460 ft.<\/b><br>from <b>2023-12-21<\/b> to <b>2023-12-31<\/b>","<b>Prioritize ROs at night (daytime generation) when \r<br />elevation below 1460 ft.<\/b><br>from <b>2023-12-21<\/b> to <b>2023-12-31<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-07-14 00:00:00.000000","2022-11-18 00:00:00.000000"],"y":[11,11],"line":{"color":"#cccccc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Due to repair work on turbines, RO operation begins \r<br />early<\/b><br>from <b>2022-07-14<\/b> to <b>2022-11-18<\/b>","<b>Due to repair work on turbines, RO operation begins \r<br />early<\/b><br>from <b>2022-07-14<\/b> to <b>2022-11-18<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-12-29 00:00:00.000000","2023-01-01 00:00:00.000000"],"y":[9,9],"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>All flow to powerhouse due to Dec storm<\/b><br>from <b>2022-12-29<\/b> to <b>2023-01-01<\/b>","<b>All flow to powerhouse due to Dec storm<\/b><br>from <b>2022-12-29<\/b> to <b>2023-01-01<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-20 00:00:00.000000"],"y":[9,9],"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Flooding pushed above El 1460 ft.<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-20<\/b>","<b>Flooding pushed above El 1460 ft.<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-20<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-06-01 00:00:00.000000","2023-07-13 00:00:00.000000"],"y":[7,7],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Prepare for measure 16 (deep drawdown); ROs \r<br />opened<\/b><br>from <b>2023-06-01<\/b> to <b>2023-07-13<\/b>","<b>Prepare for measure 16 (deep drawdown); ROs \r<br />opened<\/b><br>from <b>2023-06-01<\/b> to <b>2023-07-13<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-11-02 00:00:00.000000","2023-12-16 00:00:00.000000"],"y":[7,7],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Drawdown passage operations<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-16<\/b>","<b>Drawdown passage operations<\/b><br>from <b>2023-11-02<\/b> to <b>2023-12-16<\/b>"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-04-22 00:00:00.000000","2022-05-23 00:00:00.000000"],"y":[5,5],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Ungated continuous surface spill operation (exception \r<br />May 6-9 when turbines were used to pass high flows \r<br />caused by rain)<\/b><br>from <b>2022-04-22<\/b> to <b>2022-05-23<\/b>","<b>Ungated continuous surface spill operation (exception \r<br />May 6-9 when turbines were used to pass high flows \r<br />caused by rain)<\/b><br>from <b>2022-04-22<\/b> to <b>2022-05-23<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-05-23 00:00:00.000000","2022-06-10 00:00:00.000000"],"y":[5,5],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Spill gates replaced; nighttime spill operations<\/b><br>from <b>2022-05-23<\/b> to <b>2022-06-10<\/b>","<b>Spill gates replaced; nighttime spill operations<\/b><br>from <b>2022-05-23<\/b> to <b>2022-06-10<\/b>"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-06-14 00:00:00.000000","2022-07-20 00:00:00.000000"],"y":[5,5],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Nighttime spill operations concluded early due to \r<br />downstream temperatures<\/b><br>from <b>2022-06-14<\/b> to <b>2022-07-20<\/b>","<b>Nighttime spill operations concluded early due to \r<br />downstream temperatures<\/b><br>from <b>2022-06-14<\/b> to <b>2022-07-20<\/b>"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-07-20 00:00:00.000000","2022-08-27 00:00:00.000000"],"y":[5,5],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Turbine use for temperature management<\/b><br>from <b>2022-07-20<\/b> to <b>2022-08-27<\/b>","<b>Turbine use for temperature management<\/b><br>from <b>2022-07-20<\/b> to <b>2022-08-27<\/b>"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-08-27 00:00:00.000000","2022-10-07 00:00:00.000000"],"y":[5,5],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Concluded when LOP became isothermal<\/b><br>from <b>2022-08-27<\/b> to <b>2022-10-07<\/b>","<b>Concluded when LOP became isothermal<\/b><br>from <b>2022-08-27<\/b> to <b>2022-10-07<\/b>"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-04-15 00:00:00.000000","2023-05-19 00:00:00.000000"],"y":[5,5],"line":{"color":"#219ebc","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Ungated continuous surface spill operation<\/b><br>from <b>2023-04-15<\/b> to <b>2023-05-19<\/b>","<b>Ungated continuous surface spill operation<\/b><br>from <b>2023-04-15<\/b> to <b>2023-05-19<\/b>"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-05-19 00:00:00.000000","2023-06-01 00:00:00.000000"],"y":[5,5],"line":{"color":"#0a647a","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Spill gates replaced; nighttime spill operations<\/b><br>from <b>2023-05-19<\/b> to <b>2023-06-01<\/b>","<b>Spill gates replaced; nighttime spill operations<\/b><br>from <b>2023-05-19<\/b> to <b>2023-06-01<\/b>"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-12-01 00:00:00.000000","2022-12-15 00:00:00.000000"],"y":[3,3],"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Unplanned PH outage<\/b><br>from <b>2022-12-01<\/b> to <b>2022-12-15<\/b>","<b>Unplanned PH outage<\/b><br>from <b>2022-12-01<\/b> to <b>2022-12-15<\/b>"],"marker":{"color":"rgba(188,189,34,1)","line":{"color":"rgba(188,189,34,1)"}},"error_y":{"color":"rgba(188,189,34,1)"},"error_x":{"color":"rgba(188,189,34,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-05-06 00:00:00.000000","2022-05-09 00:00:00.000000"],"y":[1,1],"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Turbines used to pass high flows caused by high \r<br />rain event<\/b><br>from <b>2022-05-06<\/b> to <b>2022-05-09<\/b>","<b>Turbines used to pass high flows caused by high \r<br />rain event<\/b><br>from <b>2022-05-06<\/b> to <b>2022-05-09<\/b>"],"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2022-06-10 00:00:00.000000","2022-06-14 00:00:00.000000"],"y":[1,1],"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Turbines used to pass high inflows for four days \r<br />continuously<\/b><br>from <b>2022-06-10<\/b> to <b>2022-06-14<\/b>","<b>Turbines used to pass high inflows for four days \r<br />continuously<\/b><br>from <b>2022-06-10<\/b> to <b>2022-06-14<\/b>"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"lines","type":"scatter","x":["2023-12-03 00:00:00.000000","2023-12-31 00:00:00.000000"],"y":[1,1],"line":{"color":"#fca311","width":14.285714285714286},"showlegend":false,"hoverinfo":["text","text"],"text":["<b>Refilling of reservoir with high inflows (ending measure \r<br />16)<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-31<\/b>","<b>Refilling of reservoir with high inflows (ending measure \r<br />16)<\/b><br>from <b>2023-12-03<\/b> to <b>2023-12-31<\/b>"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"mode":"markers","type":"scatter","x":["2022-03-15 00:00:00.000000","2023-01-18 00:00:00.000000","2023-03-13 00:00:00.000000","2023-07-13 00:00:00.000000","2023-09-09 00:00:00.000000"],"y":[15,15,15,3,3],"marker":{"color":["black","black","black","black","black"],"size":10,"symbol":"circle","line":{"color":"black","width":1}},"showlegend":false,"hoverinfo":["text","text","text","text","text"],"text":["<b>Refill to minimum conservation pool: 2022-03-15<\/b>","<b>Refill to 700 ft; otherwise delayed refill: 2023-01-18<\/b>","<b>Refill to 720 ft; otherwise delayed refill: 2023-03-13<\/b>","<b>ROs opened to cool downstream water temperatures: 2023-07-13<\/b>","<b>Turbines turned off (elevation below power pool): 2023-09-09<\/b>"],"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"line":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<details>
+<summary>
+<span style="font-size:120%">View the timeline in tabular format (click
+to expand)</span>
+</summary>
+<table>
+<colgroup>
+<col width="12%" />
+<col width="4%" />
+<col width="6%" />
+<col width="6%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Measure</th>
+<th align="left">Project</th>
+<th align="left">Start</th>
+<th align="left">End</th>
+<th align="left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">FCR</td>
+<td align="left">2021-11-05</td>
+<td align="left">2022-01-16</td>
+<td align="left">Deep drawdown (early due to RST showing movement from
+the reservoir)</td>
+</tr>
+<tr class="even">
+<td align="left">19</td>
+<td align="left">FCR</td>
+<td align="left">2022-10-20</td>
+<td align="left">2022-11-05</td>
+<td align="left">First deep drawdown</td>
+</tr>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">FCR</td>
+<td align="left">2022-12-01</td>
+<td align="left">2022-12-29</td>
+<td align="left">Second deep drawdown</td>
+</tr>
+<tr class="even">
+<td align="left">19</td>
+<td align="left">FCR</td>
+<td align="left">2023-10-16</td>
+<td align="left">2023-10-22</td>
+<td align="left">End date estimated; First deep drawdown</td>
+</tr>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">FCR</td>
+<td align="left">2023-12-01</td>
+<td align="left">2024-01-09</td>
+<td align="left">Second “injunction” deep drawdown</td>
+</tr>
+<tr class="even">
+<td align="left">20</td>
+<td align="left">FCR</td>
+<td align="left">2022-01-16</td>
+<td align="left">2022-04-15</td>
+<td align="left">Concluded to improve likelihood of reservoir refilling
+sufficiently to operate the Fall Creek AFF</td>
+</tr>
+<tr class="odd">
+<td align="left">20</td>
+<td align="left">FCR</td>
+<td align="left">2023-01-01</td>
+<td align="left">2023-05-05</td>
+<td align="left">Delayed refill; adverse consequences as reservoir did
+not fill enough</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">FCR</td>
+<td align="left">2022-12-29</td>
+<td align="left">2023-01-01</td>
+<td align="left">Reservoir used to capture inflows during rain
+events</td>
+</tr>
+<tr class="odd">
+<td align="left">Reported regular ops.</td>
+<td align="left">FCR</td>
+<td align="left">2022-03-15</td>
+<td align="left">2022-03-15</td>
+<td align="left">Refill to minimum conservation pool</td>
+</tr>
+<tr class="even">
+<td align="left">Reported regular ops.</td>
+<td align="left">FCR</td>
+<td align="left">2022-04-16</td>
+<td align="left">2022-10-20</td>
+<td align="left">Refill and operate AFF</td>
+</tr>
+<tr class="odd">
+<td align="left">Reported regular ops.</td>
+<td align="left">FCR</td>
+<td align="left">2023-01-18</td>
+<td align="left">2023-01-18</td>
+<td align="left">Refill to 700 ft; otherwise delayed refill</td>
+</tr>
+<tr class="even">
+<td align="left">Reported regular ops.</td>
+<td align="left">FCR</td>
+<td align="left">2023-03-13</td>
+<td align="left">2023-03-13</td>
+<td align="left">Refill to 720 ft; otherwise delayed refill</td>
+</tr>
+<tr class="odd">
+<td align="left">Reported regular ops.</td>
+<td align="left">FCR</td>
+<td align="left">2023-05-05</td>
+<td align="left">2023-10-16</td>
+<td align="left">Refill and operate AFF</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">HCR</td>
+<td align="left">2022-01-01</td>
+<td align="left">2022-03-01</td>
+<td align="left">Prioritize ROs at night (daytime generation) when
+elevation below 1460 ft.</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="left">HCR</td>
+<td align="left">2022-11-18</td>
+<td align="left">2022-12-29</td>
+<td align="left">Elevation below 1460 ft., turbines used during day and
+RO prioritization at night</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">HCR</td>
+<td align="left">2023-01-01</td>
+<td align="left">2023-04-12</td>
+<td align="left">Elevation below 1460 ft., turbines used during day and
+RO prioritization at night</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="left">HCR</td>
+<td align="left">2023-11-27</td>
+<td align="left">2023-12-03</td>
+<td align="left">Estimated start date; elevation below 1460 ft.</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">HCR</td>
+<td align="left">2023-12-21</td>
+<td align="left">2023-12-31</td>
+<td align="left">Prioritize ROs at night (daytime generation) when
+elevation below 1460 ft.</td>
+</tr>
+<tr class="odd">
+<td align="left">Event</td>
+<td align="left">HCR</td>
+<td align="left">2022-07-14</td>
+<td align="left">2022-11-18</td>
+<td align="left">Due to repair work on turbines, RO operation begins
+early</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">HCR</td>
+<td align="left">2022-12-29</td>
+<td align="left">2023-01-01</td>
+<td align="left">All flow to powerhouse due to Dec storm</td>
+</tr>
+<tr class="odd">
+<td align="left">Flood risk mgt.</td>
+<td align="left">HCR</td>
+<td align="left">2023-12-03</td>
+<td align="left">2023-12-20</td>
+<td align="left">Flooding pushed above El 1460 ft.</td>
+</tr>
+<tr class="even">
+<td align="left">16</td>
+<td align="left">LOP</td>
+<td align="left">2023-06-01</td>
+<td align="left">2023-07-13</td>
+<td align="left">Prepare for measure 16 (deep drawdown); ROs opened</td>
+</tr>
+<tr class="odd">
+<td align="left">16</td>
+<td align="left">LOP</td>
+<td align="left">2023-11-02</td>
+<td align="left">2023-12-16</td>
+<td align="left">Drawdown passage operations</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="left">LOP</td>
+<td align="left">2022-04-22</td>
+<td align="left">2022-05-23</td>
+<td align="left">Ungated continuous surface spill operation (exception
+May 6-9 when turbines were used to pass high flows caused by rain)</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="left">LOP</td>
+<td align="left">2022-05-23</td>
+<td align="left">2022-06-10</td>
+<td align="left">Spill gates replaced; nighttime spill operations</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="left">LOP</td>
+<td align="left">2022-06-14</td>
+<td align="left">2022-07-20</td>
+<td align="left">Nighttime spill operations concluded early due to
+downstream temperatures</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="left">LOP</td>
+<td align="left">2022-07-20</td>
+<td align="left">2022-08-27</td>
+<td align="left">Turbine use for temperature management</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="left">LOP</td>
+<td align="left">2022-08-27</td>
+<td align="left">2022-10-07</td>
+<td align="left">Concluded when LOP became isothermal</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="left">LOP</td>
+<td align="left">2023-04-15</td>
+<td align="left">2023-05-19</td>
+<td align="left">Ungated continuous surface spill operation</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="left">LOP</td>
+<td align="left">2023-05-19</td>
+<td align="left">2023-06-01</td>
+<td align="left">Spill gates replaced; nighttime spill operations</td>
+</tr>
+<tr class="odd">
+<td align="left">Event</td>
+<td align="left">LOP</td>
+<td align="left">2022-12-01</td>
+<td align="left">2022-12-15</td>
+<td align="left">Unplanned PH outage</td>
+</tr>
+<tr class="even">
+<td align="left">Event</td>
+<td align="left">LOP</td>
+<td align="left">2023-07-13</td>
+<td align="left">2023-07-13</td>
+<td align="left">ROs opened to cool downstream water temperatures</td>
+</tr>
+<tr class="odd">
+<td align="left">Event</td>
+<td align="left">LOP</td>
+<td align="left">2023-09-09</td>
+<td align="left">2023-09-09</td>
+<td align="left">Turbines turned off (elevation below power pool)</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">LOP</td>
+<td align="left">2022-05-06</td>
+<td align="left">2022-05-09</td>
+<td align="left">Turbines used to pass high flows caused by high rain
+event</td>
+</tr>
+<tr class="odd">
+<td align="left">Flood risk mgt.</td>
+<td align="left">LOP</td>
+<td align="left">2022-06-10</td>
+<td align="left">2022-06-14</td>
+<td align="left">Turbines used to pass high inflows for four days
+continuously</td>
+</tr>
+<tr class="even">
+<td align="left">Flood risk mgt.</td>
+<td align="left">LOP</td>
+<td align="left">2023-12-03</td>
+<td align="left">2023-12-31</td>
+<td align="left">Refilling of reservoir with high inflows (ending
+measure 16)</td>
+</tr>
+</tbody>
+</table>
+</details>
+<br>
+<details>
+<summary>
+<span style="font-size:120%">View summary descriptions of the injunction
+measures in the North Santiam (click to expand)</span>
+</summary>
+<p><span style="font-size:120%"><br>Hills Creek</span></p>
+<ul>
+<li><strong>8/IM 20</strong>: Implement RO spill operations daily from
+6-10 p.m. at Hills Creek Dam once the reservoir elevation is 50 feet or
+less above the regulating outlets in the fall through March 1.</li>
+</ul>
+<p><span style="font-size:120%">Lookout Point/Dexter dams</span></p>
+<ul>
+<li><strong>17</strong>: Use storage from Hills Creek Reservoir to begin
+refilling Lookout Point Reservoir in early March. Once Lookout Point
+Reservoir reaches elevation 890 ft., spill water over the spillways 24/7
+for at least 30 days at both Lookout Point and Dexter dams while
+maintaining the elevation of Lookout Point Reservoir between 890-893 ft.
+During that time, generally do not operate the turbines at both
+projects, with limited exceptions. After that initial 30-day period,
+spill at night at both projects, with generation during the day, for as
+long as water is available and downstream conditions allow. Then manage
+Lookout Point Reservoir to achieve elevation 887.5 ft. by July 15, 2022
+and operate the regulating outlets as needed to reduce downstream water
+temperatures when water temperatures downstream of Dexter Dam near 60
+degrees.</li>
+<li><strong>16</strong>: Annual Lookout Point Reservoir deep drawdown
+operation from November 15 through December 15.</li>
+</ul>
+<p><span style="font-size:120%">Fall Creek</span></p>
+<ul>
+<li><strong>19</strong>: Annual Fall Creek Reservoir deep drawdown
+operation similar to prior years but extend the dates from December 1
+through January 15.</li>
+<li><strong>20</strong>: On January 16, begin the refill of Fall Creek
+Reservoir to elevation 700 feet and hold at that elevation through March
+15. On March 16, initiate the refill to reach elevation 728 feet by
+April 15 and maintain that elevation through May 15 unless additional
+refill is necessary to ensure operation of the Fall Creek Adult Fish
+Collection Facility through September 30. After May 15, refill the
+reservoir to the extent possible.</li>
+</ul>
+</details>
+<p><br>For full details, see implementation plans on the <a
+href="https://www.nwp.usace.army.mil/Locations/Willamette-Valley/Injunction/">Willamette
+Injunction website</a>.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
