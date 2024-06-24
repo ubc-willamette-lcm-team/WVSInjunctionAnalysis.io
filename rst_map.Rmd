@@ -23,7 +23,12 @@ library(ggplot2)
 library(plotly)
 
 overview_map_ggplotly <- readRDS("data/2024_06_24_rst_map_compiled.Rds")
-overview_map_ggplotly
+overview_map_ggplotly %>%
+      plotly::layout(legend=list(x=0,
+      y = 0, 
+      xanchor = 'left',
+      yanchor = 'top',
+      orientation = 'h'))
 ```
 
 # Data table
@@ -37,5 +42,8 @@ rst_raw <- read_xlsx("data/Summary of available RST data.xlsx",
     # The "notes" column has no header, fix
     rename(Notes = `...12`)
     
-datatable(rst_raw)
+datatable(rst_raw,
+  filter = "top",
+  rownames = FALSE, 
+  width = 600)
 ```
