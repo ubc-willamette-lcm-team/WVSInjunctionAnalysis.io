@@ -1,3 +1,4 @@
+output_dir: docs
 name: "wvs-injunction-webpage"
 navbar:
   title: "WVS Injunction Assessment"
