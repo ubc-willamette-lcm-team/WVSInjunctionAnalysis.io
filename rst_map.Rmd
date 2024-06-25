@@ -15,7 +15,17 @@ The locations of the RSTs, years of operation, and operator IDs are described in
 
 # Map 
 
-```{r map-it, echo = F, message = F, warning = F, width = "100%"}
+Below, you can interact with the map using your cursor. 
+Focal subbasins are purple, and focal projects and reservoirs are gold. 
+Pink circles represent pre-injunction RST sites, blue triangles represent post-injunction sites.
+
+Hovering over a project, river, reservoir, or other feature will open help-text that explains what is under your cursor.
+You can also click-and-drag over areas of the map to zoom in.
+Double-click to zoom back out. 
+
+<br>
+
+```{r map-it, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
 setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
 setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
 
@@ -24,16 +34,21 @@ library(plotly)
 
 overview_map_ggplotly <- readRDS("data/2024_06_24_rst_map_compiled.Rds")
 overview_map_ggplotly %>%
-      plotly::layout(legend=list(x=0,
-      y = 0, 
-      xanchor = 'left',
-      yanchor = 'top',
-      orientation = 'h'))
+  plotly::layout(
+    legend = list(
+        x = 0, 
+        y = 1, 
+      orientation = 'h', 
+      font = list(size = 14)),
+      autosize = T, height = 800, width = "100%")
 ```
 
 # Data table
 
-```{r table-it, echo = F, message = F, warning = F}
+Here is the data used to populate the map above, but in table form.
+Using the inputs at the top of each column, you may filter the data to specific years, locations, etc.
+
+```{r table-it, echo = F, message = F, warning = F, out.width = "100%"}
 library(DT)
 library(readxl)
 
@@ -42,8 +57,21 @@ rst_raw <- read_xlsx("data/Summary of available RST data.xlsx",
     # The "notes" column has no header, fix
     rename(Notes = `...12`)
     
-datatable(rst_raw,
-  filter = "top",
+datatable(rst_raw %>%
+  mutate(
+    `Data with UBC` = factor(`Data with UBC`, levels = c("Yes", "No")), 
+    Operator = factor(Operator),
+    Subbasin = factor(Subbasin),
+    Trap = factor(Trap),
+    `Injunction period` = factor(`Injunction period`, levels = c("Pre", "Post")),
+    `Above or Below` = factor(`Above or Below`, levels = c("Above", "Below")),
+    Year = as.integer(Year)
+  ) %>%
+  select(-c(`UTM (NAD 83)`, Lat, Lon)),
+  filter = list(position = "top", clear = FALSE),
   rownames = FALSE, 
-  width = 600)
+  width = "100%"
+  ) %>%
+  DT::formatStyle(columns = c(3, 9), fontSize = '75%') %>%
+  DT::formatStyle(columns = c(1,2,4,5,6,7,8), fontSize = '85%')
 ```
