@@ -65,7 +65,8 @@ datatable(rst_raw %>%
     Trap = factor(Trap),
     `Injunction period` = factor(`Injunction period`, levels = c("Pre", "Post")),
     `Above or Below` = factor(`Above or Below`, levels = c("Above", "Below")),
-    Year = as.integer(Year)
+    Year = factor(Year),
+    Location = factor(Location)
   ) %>%
   select(-c(`UTM (NAD 83)`, Lat, Lon)),
   filter = list(position = "top", clear = FALSE),
