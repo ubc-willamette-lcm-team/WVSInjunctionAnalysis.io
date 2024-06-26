@@ -34,7 +34,8 @@ setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
 library(ggplot2)
 library(plotly)
 
-overview_map_ggplotly <- readRDS("data/2024_06_26_rst_map_compiled.Rds")
+overview_map_ggplotly <- readRDS("docs/data/2024_06_26_rst_map_compiled_yrranges.Rds")
+
 overview_map_ggplotly %>%
   plotly::layout(
     legend = list(
