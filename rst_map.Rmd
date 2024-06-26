@@ -13,7 +13,7 @@ output:
 Rotary screw traps (RSTs) are used to monitor downstream migration of salmonids throughout the Willamette Valley basin. 
 The locations of the RSTs, years of operation, and operator IDs are described in the map below, and in an interactive data table. 
 
-# Map 
+# Map of all RST locations (including those where UBC does not have data)
 
 Below, you can interact with the map using your cursor. 
 Focal subbasins are purple, and focal projects and reservoirs are gold. 
@@ -25,7 +25,10 @@ Double-click to zoom back out.
 
 <br>
 
-```{r map-it, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
+<span style="font-size:120%">This map includes several locations which were estimated or assumed from previous years. See below for a map of only verified locations.</span>  
+
+
+```{r map-it-estimated, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
 setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
 setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
 
@@ -34,10 +37,11 @@ setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
 library(ggplot2)
 library(plotly)
 
-overview_map_ggplotly <- readRDS("docs/data/2024_06_26_rst_map_compiled_yrranges.Rds")
+overview_map_ggplotly <- readRDS("data/2024_06_26_v2_rst_map_compiled_estimatedlocs.Rds")
 
 overview_map_ggplotly %>%
   plotly::layout(
+    title = "All RST locations (incl. estimated)",
     legend = list(
         x = 0, 
         y = 1, 
@@ -78,4 +82,36 @@ datatable(rst_raw %>%
   ) %>%
   DT::formatStyle(columns = c(3, 9), fontSize = '75%') %>%
   DT::formatStyle(columns = c(1,2,4,5,6,7,8), fontSize = '85%')
+```
+
+# Map of complete locations only
+
+Below, you can interact with the map using your cursor. 
+Focal subbasins are purple, and focal projects and reservoirs are gold. 
+Pink circles represent pre-injunction RST sites, blue triangles represent post-injunction sites.
+
+Hovering over a project, river, reservoir, or other feature will open help-text that explains what is under your cursor.
+You can also click-and-drag over areas of the map to zoom in.
+Double-click to zoom back out. 
+
+```{r map-it-complete, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
+setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
+setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
+
+# Uses the outputs from the "add_rst_to_basemaps.R" script in the "supp_code" folder of the website page
+
+library(ggplot2)
+library(plotly)
+
+overview_map_ggplotly <- readRDS("data/2024_06_26_v2_rst_map_compiled_yrranges.Rds")
+
+overview_map_ggplotly %>%
+  plotly::layout(
+    title = "Filtered RST locations",
+    legend = list(
+        x = 0, 
+        y = 1, 
+      orientation = 'h', 
+      font = list(size = 14)),
+      autosize = T, height = 800, width = "100%")
 ```
