@@ -1,4 +1,7 @@
 # add_rst_to_basemaps.R 
+### Mairin Deith (mdeith [at] oceans.ubc.ca)
+### Last updated July 10, 2024 to add USGS gage locations used for hydrology 
+###   checking
 
 library(sf)
 library(osmdata) # OpenStreetMap
@@ -9,6 +12,9 @@ library(ggthemes)
 # library(rnaturalearthdata)
 library(ggspatial)
 library(readxl)
+
+# New library for gage data
+library(dataRetrieval)
 
 basemap <- readRDS(file = "basemap_noRST_20240626.Rds")
 
@@ -270,10 +276,38 @@ rst_plotting_df <- rst_prepost_yrs %>%
 rst_plotting_df <- sf::st_cast(rst_plotting_df, "MULTIPOINT")
 # WTF it worked????????
 
+### Add in USGS gages
+gages <- list(
+    # gages from https://dashboard.waterdata.usgs.gov/app/nwd/en/
+    "BCL/DET" = "14181500", #NORTH SANTIAM RIVER AT NIAGARA, OR
+
+    # No matching records?
+    # "DET" = "14180510", # DETROIT DAM TAILWATER NEAR DETROIT, OR
+    # No matching records?
+    # "FOS" = "14187200", # SOUTH SANTIAM NEAR FOSTER, OR
+    # No matching records?
+    # This is not returning any records
+    # "GPR" = "14186110", # GREEN PETER DAM TAILWATER NEAR FOSTER, OR
+    "CGR" = "14159500", #SOUTH FORK MCKENZIE RIVER NEAR RAINBOW, OR
+    "DEX/LOP" = "14150000", # MIDDLE FORK WILLAMETTE RIVER NEAR DEXTER, OR
+    # "LOP" = "14149010", # LOOKOUT POINT TAILWATER NEAR LOWELL, OR
+    # "HCR" = "14145110", # HILLS CREEK DAM TAILWATER NEAR OAKRIDGE, OR
+    "HCR" = "14145500", # MF WILLAMETTE RIVER ABV SALT CREEK, NEAR OAKRIDGE, OR
+    "FAL" = "14151000" # FALL CREEK BLW WINBERRY CREEK, NEAR FALL CREEK, OR
+    )
+
+gageInfo <- readNWISsite(gages) #NWIS site information
+gage_plotting <- sf::st_as_sf(gageInfo, 
+  coords = c("dec_long_va", "dec_lat_va"),
+  crs = "+proj=longlat +datum=WGS84")
+
 overview_ggplotly <- ggplotly(basemap +
 # ggplot() + 
+    #  +
+    # labs(
+    #   color = "USGS gages") + 
     geom_sf(data = rst_plotting_df, inherit.aes = FALSE, 
-      alpha = 0.8,
+      alpha = 0.6,
       aes(
         color = prepost_composite,
         shape = prepost_composite,
@@ -281,13 +315,17 @@ overview_ggplotly <- ggplotly(basemap +
     labs(
       color = "<b>Injunction period</b>\n(click a category to hide it\non the map, double-click to\nhide all others)",
       shape = "<b>Injunction period</b>\n(click a category to hide it\non the map, double-click to\nhide all others)") + 
+    geom_sf(data = gage_plotting, inherit.aes = FALSE, 
+      alpha = 0.5, aes(
+        text = paste0("USGS gage at ", station_nm, " (#", site_no, ")")), 
+      color = "black", shape = 5, size = 2.5) + 
     # Limit to just the study region
-    scale_color_brewer(palette = "Dark2") + 
+    scale_color_brewer(palette = "Dark2")  + 
     coord_sf(xlim = c(-123.2336, -121.9263), ylim = c(43.3971, 44.9601)), # + 
     # theme(legend.position = "bottom"),
   tooltip = "text")
 
-saveRDS(overview_ggplotly, file = "2024_06_26_v2_rst_map_compiled_estimatedlocs.Rds")
+saveRDS(overview_ggplotly, file = "2024_07_10_rst_map_compiled_estimatedlocs_gages.Rds")
 # matrix(c(-123.2336, -121.9263, 43.3971, 45.6601),
 #   byrow = T, ncol = 2)
 

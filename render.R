@@ -2,4 +2,4 @@
 
 library(rmarkdown)
 
-rmarkdown::render("index.html")
+rmarkdown::render_site()
