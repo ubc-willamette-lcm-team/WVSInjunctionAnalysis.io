@@ -16,10 +16,10 @@ library(readxl)
 # New library for gage data
 library(dataRetrieval)
 
-basemap <- readRDS(file = "basemap_noRST_20240626.Rds")
+basemap <- readRDS(file = "data/basemap_noRST_20240717.Rds")
 
 rst_raw <- read_xlsx(
-  path = "Summary of available RST data_estimatesForBlanks_20240626.xlsx", 
+  path = "data/Summary of available RST data_estimatesForBlanks_20240717.xlsx", 
   sheet = "Trap Locations") %>%
   # The "notes" column has no header, fix
   rename(Notes = `...12`)
@@ -284,7 +284,7 @@ gages <- list(
     # No matching records?
     # "DET" = "14180510", # DETROIT DAM TAILWATER NEAR DETROIT, OR
     # No matching records?
-    # "FOS" = "14187200", # SOUTH SANTIAM NEAR FOSTER, OR
+    "FOS" = "14187200", # SOUTH SANTIAM NEAR FOSTER, OR
     # No matching records?
     # This is not returning any records
     # "GPR" = "14186110", # GREEN PETER DAM TAILWATER NEAR FOSTER, OR
@@ -293,8 +293,17 @@ gages <- list(
     # "LOP" = "14149010", # LOOKOUT POINT TAILWATER NEAR LOWELL, OR
     # "HCR" = "14145110", # HILLS CREEK DAM TAILWATER NEAR OAKRIDGE, OR
     "HCR" = "14145500", # MF WILLAMETTE RIVER ABV SALT CREEK, NEAR OAKRIDGE, OR
-    "FAL" = "14151000" # FALL CREEK BLW WINBERRY CREEK, NEAR FALL CREEK, OR
-    )
+    "FAL" = "14151000", # FALL CREEK BLW WINBERRY CREEK, NEAR FALL CREEK, OR
+    ### ABOVE-DAM
+    "BRE" = "14179000",
+    "DET above" = "14178000", #NO SANTIAM R BLW BOULDER CRK, NR DETROIT, OR
+    "FOS above" = "14185000", #SOUTH SANTIAM RIVER BELOW CASCADIA, OR
+    "CGR above" = "14159200", #SO FK MCKENZIE RIVER ABV COUGAR LAKE NR RAINBOW OR
+    "LOP above" = "14148000", #MF WILLAMETTE RIVER BLW N FORK, NR OAKRIDGE, OR.
+    "GRP above" = "14185800", #MIDDLE SANTIAM R NEAR CASCADIA, OR
+    "HCR above" = "14144900", #HILLS CR AB HILLS CR RES, NR OAKRIDGE, OR
+    "FAL above" = "14150290" #FALL CREEK ABOVE NORTH FORK, NEAR LOWELL, OR
+  )
 
 gageInfo <- readNWISsite(gages) #NWIS site information
 gage_plotting <- sf::st_as_sf(gageInfo, 
@@ -318,14 +327,14 @@ overview_ggplotly <- ggplotly(basemap +
     geom_sf(data = gage_plotting, inherit.aes = FALSE, 
       alpha = 0.5, aes(
         text = paste0("USGS gage at ", station_nm, " (#", site_no, ")")), 
-      color = "black", shape = 5, size = 2.5) + 
+      color = "black", shape = 19, size = 1.5) + 
     # Limit to just the study region
     scale_color_brewer(palette = "Dark2")  + 
     coord_sf(xlim = c(-123.2336, -121.9263), ylim = c(43.3971, 44.9601)), # + 
     # theme(legend.position = "bottom"),
   tooltip = "text")
 
-saveRDS(overview_ggplotly, file = "2024_07_10_rst_map_compiled_estimatedlocs_gages.Rds")
+saveRDS(overview_ggplotly, file = "2024_07_17_rst_map_compiled_estimatedlocs_gages.Rds")
 # matrix(c(-123.2336, -121.9263, 43.3971, 45.6601),
 #   byrow = T, ncol = 2)
 

@@ -15,18 +15,18 @@ The locations of the RSTs, years of operation, and operator IDs are described in
 
 # Map of all RST locations (including those where UBC does not have data)
 
-Below, you can interact with the map using your cursor. 
-Focal subbasins are purple, and focal projects and reservoirs are gold. 
-Pink circles represent pre-injunction RST sites, blue triangles represent post-injunction sites.
+<span style="font-size:120%">This map includes several locations which were estimated or assumed from previous years. Scroll further down the page to see a map of <strong>only</strong> verified locations.</span>  
 
+Below, you can interact with the map using your cursor. 
 Hovering over a project, river, reservoir, or other feature will open help-text that explains what is under your cursor.
 You can also click-and-drag over areas of the map to zoom in.
 Double-click to zoom back out. 
 
+Focal subbasins are purple, and focal projects and reservoirs are gold. 
+Pink circles represent pre-injunction RST sites, blue triangles represent post-injunction sites.
+Black circles are USGS gages used during analysis (e.g., to verify hydrological data reported at USACE projects, during trap efficiency analysis, and as covariates in statistical models).
+
 <br>
-
-<span style="font-size:120%">This map includes several locations which were estimated or assumed from previous years. See below for a map of only verified locations.</span>  
-
 
 ```{r map-it-estimated, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
 setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
@@ -37,7 +37,7 @@ setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
 library(ggplot2)
 library(plotly)
 
-overview_map_ggplotly <- readRDS("data/2024_07_10_rst_map_compiled_estimatedlocs_gages.Rds")
+overview_map_ggplotly <- readRDS("data/2024_07_17_rst_map_compiled_estimatedlocs_gages.Rds")
 
 overview_map_ggplotly %>%
   plotly::layout(
@@ -59,7 +59,7 @@ Using the inputs at the top of each column, you may filter the data to specific 
 library(DT)
 library(readxl)
 
-rst_raw <- read_xlsx("data/Summary of available RST data.xlsx", 
+rst_raw <- read_xlsx("data/Summary of available RST data_estimatesForBlanks_20240717.xlsx", 
     sheet = "Trap Locations") %>%
     # The "notes" column has no header, fix
     rename(Notes = `...12`)
