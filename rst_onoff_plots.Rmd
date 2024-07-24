@@ -24,7 +24,7 @@ setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
 library(ggplot2)
 library(plotly)
 
-rst_onoff_df <- readRDS("data/2024_07_23_RST_OnlinePlot.Rds")
+rst_onoff_df <- readRDS("data/2024_07_24_RST_OnlinePlotPoints.Rds")
 
 rst_onoff_df %>%
   plotly::layout(
