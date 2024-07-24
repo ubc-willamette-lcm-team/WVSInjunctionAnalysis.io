@@ -29,9 +29,9 @@ rst_onoff_df <- readRDS("data/2024_07_23_RST_OnlinePlot.Rds")
 rst_onoff_df %>%
   plotly::layout(
     legend = list(
-        x = 0, 
+        x = 1, 
         y = 1, 
-      orientation = 'h', 
+      orientation = 'v', 
       font = list(size = 12)),
       autosize = T, height = 800, width = "100%")
 ```
