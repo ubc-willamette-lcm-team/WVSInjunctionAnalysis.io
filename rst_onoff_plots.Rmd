@@ -13,6 +13,8 @@ output:
 Rotary screw traps (RSTs) are used to monitor downstream migration of salmonids throughout the Willamette Valley basin. 
 The locations of the RSTs are in a previous sheet; this sheet shows when the RSTs were actively sampling (according to dates in cleaned RST records).
 
+Each point represents a date where the trap was checked (i.e., every line in the RST trap log sheets in the cleaned RST workbooks prepared by Tom Porteus in July 2024).
+
 # RST on/off times
 
 ```{r map-it, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
