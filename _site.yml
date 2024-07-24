@@ -7,6 +7,8 @@ navbar:
       href: timeline_static.html
     - text: "RST location map"
       href: rst_map.html
+    - text: "RST on/off times"
+      href: rst_onoff_plots.html
 output:
   html_document:
     theme: flatly

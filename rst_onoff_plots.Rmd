@@ -1,0 +1,37 @@
+---
+title: "WVS Injunction: RST on/off times"
+author: "Mairin Deith, m.deith@oceans.ubc.ca"
+date: "`r paste0('Last updated on ', format(Sys.time(), '%Y-%b-%d'))`"
+output:
+  html_document:
+    number_sections: false
+    theme: flatly
+---
+
+# Background 
+
+Rotary screw traps (RSTs) are used to monitor downstream migration of salmonids throughout the Willamette Valley basin. 
+The locations of the RSTs are in a previous sheet; this sheet shows when the RSTs were actively sampling (according to dates in cleaned RST records).
+
+# RST on/off times
+
+```{r map-it, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
+setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
+setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
+
+# Uses the outputs from the "add_rst_to_basemaps.R" script in the "supp_code" folder of the website page
+
+library(ggplot2)
+library(plotly)
+
+rst_onoff_df <- readRDS("data/2024_07_23_RST_OnlinePlot.Rds")
+
+rst_onoff_df %>%
+  plotly::layout(
+    legend = list(
+        x = 0, 
+        y = 1, 
+      orientation = 'h', 
+      font = list(size = 12)),
+      autosize = T, height = 800, width = "100%")
+```
