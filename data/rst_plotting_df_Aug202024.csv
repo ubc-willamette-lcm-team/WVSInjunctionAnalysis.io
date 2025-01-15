@@ -1,0 +1,21 @@
+Location,data_pre,ops_pre,traps_pre,data_post,ops_post,traps_post,dat_pre_ranges,dat_post_ranges,lat1,lon1,lat2,lon2
+Big Cliff tailrace,"2014, 2015, 2016",ODFW,5ft,"2021, 2022, 2023","Cramer/EAS, EAS",8ft,2014-2016,2021-2023,-122.3052, 44.75632,,
+Breitenbush,"2010, 2011, 2015, 2016","ODFW, NA",5ft,2023,EAS,5ft,"2010-2011,2015-2016",2023,-122.1310,44.75168,-122.0958,44.75168
+Cougar Head of Reservoir SF McK,"2010, 2011, 2012, 2013, 2014, 2015, 2016",ODFW,5ft,"2022, 2023",EAS,5ft,2010-2016,2022-2023,-122.2178, 44.04818,,
+Cougar tailrace,"2011, 2012, 2013, 2014, 2015, 2016",ODFW,"2x8ft (PH), 2x5ft (RO), 2x8ft (PH), 1x5ft (RO)","2021, 2022, 2023","Cramer/EAS, EAS","2x8ft (PH), 1x5ft (RO)",2011-2016,2021-2023,-122.2438, 44.13255,,
+Detroit Head of Reservoir N Santiam,"2010, 2011, 2012, 2013, 2014, 2015, 2016",ODFW,5ft,2023,EAS,5ft,2010-2016,2023,-122.0504, 44.69276,,
+Detroit tailrace BRZ bridge,"2011, 2012, 2013",ODFW,"8ft, 5ft",,,,2011-2013,,-122.2555, 44.72545,,
+Detroit tailrace turbine,"2013, 2014",ODFW,8ft,,,,2013-2014,,-122.2526, 44.72242,,
+Dexter tailrace,,,,"2022, 2023",EAS,5ft,,2022-2023,-122.8114, 43.92527,,
+Fall Creek head of reservoir,"2005, 2006, 2007, 2008",USACE,8ft,"2021, 2022, 2023","Cramer, EAS",8ft,2005-2008,2021-2023,-122.6666, 43.97507,,
+Fall Creek tailrace,"2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020",USACE,8ft,"2021, 2022, 2023","USACE, USACE/EAS, EAS",8ft,2006-2020,2021-2023,-122.7603, 43.94547,,
+Foster Head of Reservoir S Santiam,"2010, 2011, 2012, 2013, 2014, 2015, 2016",ODFW,5ft,"2022, 2023",EAS,5ft,2010-2016,2022-2023,-122.4990, 44.39149,,
+Foster tailrace,"2011, 2012, 2013, 2014, 2015, 2016",ODFW,"8ft, 1x8ft, 1x5ft",,,,2011-2016,,-122.6718, 44.41472,,
+Green Peter Head of Reservoir M Santiam,,,,2023,EAS,5ft,,2023,-122.3735, 44.51486,,
+Green Peter tailrace,,,,"2022, 2023",EAS,8ft,,2022-2023,-122.5500, 44.44844,,
+Hills Creek Head of Reservoir,"2013, 2015","USACE, ODFW",5ft,2023,EAS,5ft,"20,132,015",2023,-122.4562, 43.60359,,
+Hills Creek PH tailrace,"2003, 2004, 2005, 2011, 2012, 2013, 2014, 2015, 2016, 2017","USACE, NA",8ft,"2021, 2022, 2023",EAS,8ft,"2003-2005,2011-2017",2021-2023,-122.4246, 43.71113,,
+Hills Creek RO tailrace,"2012, 2013",USACE,5ft,"2021, 2022, 2023",EAS,5ft,2012-2013,2021-2023,-122.4234,43.71208,-122.4249,43.71208
+Lookout Point Head of Reservoir MF,"2010, 2011, 2012, 2013, 2014","NA, ODFW","8ft, 2x8ft, 5ft","2022, 2023",EAS,5ft,2010-2014,2022-2023,-122.5313,43.76669,-122.4249,43.76669
+Lookout Point tailrace,"2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019",USACE,"1x8ft, 2x8ft, 3x8ft","2021, 2022, 2023","Cramer, EAS",3x8ft,2007-2019,2021-2023,-122.7565, 43.91442,,
+North Fork Middle Fork,"2007, 2008, 2015, 2016","USACE, ODFW","8ft, 5ft",,,,"2007-2008,2015-2016",,-122.4902, 43.76775,,

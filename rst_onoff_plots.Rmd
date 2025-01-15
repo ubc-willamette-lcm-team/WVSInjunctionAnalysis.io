@@ -19,7 +19,7 @@ Each point represents a date where the trap was checked (i.e., every line in the
 
 ```{r map-it, echo = F, message = F, warning = F, out.width = "100%", out.height = "100%"}
 setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
-setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
+setwd("InjunctionRSTDashboardWebsite\WVSInjunctionAnalysis.io")
 
 # Uses the outputs from the "add_rst_to_basemaps.R" script in the "supp_code" folder of the website page
 

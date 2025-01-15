@@ -17,6 +17,14 @@ library(readxl)
 library(dataRetrieval)
 
 basemap <- readRDS(file = "data/basemap_noRST_20240717.Rds")
+basemap_ggplot <- readRDS(file = "ggplot_basemap_noRST_20240815.Rds")
+basemap_ggplot_nolabs <- basemap_ggplot
+
+basemap_ggplot$layers
+
+for (n in c(15:23, 25:27)) {
+  basemap_ggplot_nolabs$layers[[n]] <- NULL
+}
 
 rst_raw <- read_xlsx(
   path = "data/Summary of available RST data_estimatesForBlanks_20240717.xlsx", 
@@ -339,44 +347,50 @@ saveRDS(overview_ggplotly, file = "2024_07_17_rst_map_compiled_estimatedlocs_gag
 #   byrow = T, ncol = 2)
 
 message("Written overview ggplotly object; subbasin specific commands below have not been run")
-break
+# break
 
 # # Subbasin maps ----------------------------------------------------------------
 #### Summarize data according to years active, etc.
-nsantiam_zoommap <- basemap +
+nsantiam_zoommap <- basemap_ggplot +
 # ggplot() +
   geom_sf(data = rst_prepost_yrs,
     # %>% filter(crs_orig == "UTM"),
     alpha = 0.8,
     aes(
-      color = inj_factor,
-      shape = inj_factor,
-      text = plotly_map_text), size = 1.5) +
-  coord_sf(xlim = c(-122.39244, -122.00830), ylim = c(44.69349, 44.72592)) +
-  scale_shape_manual(values = c(16, 18)) +
+      color = prepost_composite,
+      shape = prepost_composite# ,
+      # text = plotly_map_text
+      ), size = 1.5) +
+  
+  coord_sf(xlim = c(-122.39244, -122.00830), ylim = c(44.6, 44.8)) +
+  scale_shape_manual(values = c(16, 18, 1)) +
   labs(
     color = "Injunction period\n(click a category to hide it\non the map, double-click to\nhide all others)",
     shape = "Injunction period\n(click a category to hide it\non the map, double-click to\nhide all others)")
+
 ggplotly(nsantiam_zoommap, tooltip = "text")
 
 # northsantiam_bb <- matrix(c(-123.19244, -121.69830, 44.34349, 44.92592),
 #   byrow = T, ncol = 2)
 
-ssantiam_zoommap <- basemap +
+ssantiam_zoommap <- basemap_ggplot +
 # ggplot() +
   geom_sf(data = rst_prepost_yrs, 
     # %>% filter(crs_orig == "UTM"), 
     alpha = 0.8,
     aes(
-      color = `Injunction period`,
-      shape = `Injunction period`,
-      text = plotly_map_text), size = 1.5) +
+      color = prepost_composite,
+      shape = prepost_composite,
+      # text = plotly_map_text
+      ), 
+      size = 1.5) +
   coord_sf(xlim = c(-122.7, -122.375), ylim = c(44.3, 44.56)) + 
   # coord_sf(xlim = c(-122.39244, -122.00830), ylim = c(44.69349, 44.72592)) + 
-  scale_shape_manual(values = c(16, 18)) + 
+  scale_shape_manual(values = c(16, 18, 1)) + 
   labs(
     color = "Injunction period\n(click a category to hide it\non the map, double-click to\nhide all others)",
     shape = "Injunction period\n(click a category to hide it\non the map, double-click to\nhide all others)")
+
 ggplotly(ssantiam_zoommap, tooltip = "text")
 
 mfork_zoommap <- basemap +
@@ -384,7 +398,7 @@ mfork_zoommap <- basemap +
   inherit.aes = FALSE,
   size = 2,
     aes(
-      shape = `Injunction period`,
+      shape = prepost_composite,
       color = Operator,
       text = paste0(
         Location, 
