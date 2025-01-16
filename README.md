@@ -14,7 +14,7 @@ View the webpage by clicking on this link: [https://ubc-willamette-lcm-team.gith
 
 This webpage is built from a series of RMarkdown files that are compiled into html files by `render.R`. 
 As of January 2025, there are four files: 
- 
+
 * `index.Rmd` (the landing page of the website),
 * `timeline_static.Rmd`, which hosts interactive timelines of when injunction measures were implemented at each site, 
 * `rst_map.Rmd`, which hosts an interactive map graphic showing the locations of rotary screw traps (RSTs) and USGS gages, 
@@ -40,7 +40,7 @@ navbar:
     ...
 ```
 
-Once you have edited the Rmarkdown file, rendered it to html, and optionally updated the `_site.yml` file, push the changes to the GitHub repository.
+Once you have edited the R Markdown file, rendered it to html, and optionally updated the `_site.yml` file, push the changes to the GitHub repository.
 After a few minutes the webpage should update to reflect the updates.
 
-See the documentation for rmarkdown, particularly the `render_site` function, for more details.
+See the documentation for the `rmarkdown` R library, particularly the `render_site` function, for more details.

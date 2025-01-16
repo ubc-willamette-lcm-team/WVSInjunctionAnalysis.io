@@ -32,7 +32,7 @@ Black circles are USGS gages used during analysis (e.g., to verify hydrological 
 setwd("C:/Users/mdeith/OneDrive - UBC/General/Injunction Analysis/")
 setwd("injunction_timeline/code/WVSInjunctionAnalysis.io")
 
-# Uses the outputs from the "add_rst_to_basemaps.R" script in the "supp_code" folder of the website page
+# Uses the outputs from the "add_rst_to_basemaps.R" script 
 
 library(ggplot2)
 library(plotly)
